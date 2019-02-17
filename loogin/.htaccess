@@ -1,0 +1,15 @@
+#this one goes in ~/public_html/login/ and handles logins w/ pubcookie
+
+#old method
+# PubcookieAppID "LNLDB"
+# AuthType EGNetID
+# AuthName "LNL Database Login"
+# require valid-user
+
+#new method
+#AuthType CAS
+#AuthName "LNL Databse Login"
+#require valid-user
+
+#DirectoryIndex index.html
+# Redirect 301 / http://lnl.wpi.edu/my/

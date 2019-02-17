@@ -1,0 +1,247 @@
+body { margin: 0; padding: 0; background: #262626; }
+
+* {margin: 0; padding: 0; border: 0; font-family: "Trebuchet MS", Arial, sans-serif; }
+
+
+/*------------Basic styles------------*/
+
+p, h1, h2, h3, span#copyright, span#design { margin: 0 10px; color: #fff; font-weight: normal; text-decoration: none; background: transparent }
+
+p { font-size: 0.8em; line-height: 1.4em; text-align: justify }
+p.center { text-align: center;}
+p.indented { text-indent: 20px; }
+p.form { font-size: 12px; }
+h1 { font-size: 1.3em; line-height: 1.4em; letter-spacing: 0.25em }	/* site heading */
+h2 { font-size: 1.0em; line-height: 1.4em; color:#FFFF00 }	/*
+site heading */
+h2.center { text-align: center }
+h3 { font-size: 0.8em; line-height: 1.4em; color: #FFFF00  }				/* sub headings */
+h3.center { text-align: center }
+span#copyright { font-size: 13px; line-height: 35px }  /* sets the copyright styles */
+span#design {  float: right; font-size: 13px; line-height: 35px }  /* floats the design link into position */
+span.validation {  float: right; margin-right: 10px; } /* floats the validation buttons */
+.validation img {  margin: 0; } /* floats the validation buttons */
+
+div { padding: 10px 0;}
+
+#hdrimg a {color:#fff; text-decoration: none; font-weight: normal;}
+#hdrimg a strong {color: #fff; text-decoration: none; font-weight: normal;}
+#hdrimg a:hover {color: #fff; text-decoration: none; font-weight: normal;}
+#hdrimg a:hover strong {color: #06FF00; text-decoration: none; font-weight: normal;}
+
+a {color:#FFFF99; text-decoration: none}
+a:hover {color: #fff; text-decoration: underline}
+
+table { font-size: 0.8em; line-height: 1.4em; text-align: justify; color: #FFF }
+table.center { margin-left: auto; margin-right: auto }
+
+.caption {
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 10px;
+    text-align: center;
+	color: #FFF;
+}
+
+.textbox {
+	padding-top: 20px;
+	padding-left:0px;
+	padding-right:10px;
+	padding-bottom: 0px;
+	margin-bottom:0px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-repeat: no-repeat;
+	background-image: url(images/bg.jpg);
+	min-width: 400px;
+	min-height: 267px;
+}
+
+.textbox2 {
+	background-repeat: no-repeat;
+	background-image: url(images/bg2.jpg);
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	width: 340px;
+	height: 234px;
+}
+
+.textbox3 {
+	background-repeat: no-repeat;
+	background-image: url(images/textbox.jpg);
+	padding: 0px;
+	margin: 0px;
+	width: 550px;
+	height: 150px;
+}
+
+.img {
+	padding-top: 5px;
+}
+
+/*-----------Barone's Additions-------------*/
+
+fieldset {
+	border: 1px solid #000;
+	padding-right: 5px;
+	width: auto;
+	height: auto;
+	background: #808080;
+}
+
+label {
+	width: 150px;
+	float: left;
+	text-align: right;
+	margin-top: 4px;
+	margin-right: 0.5em;
+	font-size:11px;
+	color: #fff;
+	display: block;
+}
+
+legend {
+	color: #000;
+	background: #FFFF00;
+	border: 1px solid #000;
+	margin-left:10px;
+	padding: 2px 6px;
+	font-size: 12px;
+}
+
+input {
+	color: #000;
+	background: #FFF;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+select {
+	color: #000;
+	background: #FFF;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+/* Sets a hard width for the select boxes for entering time/dates of setup and event */
+select[name^="Month"] { width: 90px }
+select[name^="Day"]  { width: 40px }
+select[name^="Year"] { width: 50px }
+select[name^="Hour"] { width: 40px }
+select[name^="Minute"] { width: 40px }
+select[name^="AP"] { width: 45px }
+
+
+textarea {
+	color: #000;
+	background: #FFF;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+}
+
+.submit input {
+	color: #000;
+	background: #FFF;
+	margin-top: 5px;
+	padding:5px;
+	border: 2px outset #d7b9c9;
+}
+
+.textbox4 {
+	width: auto;
+	height: 175px;
+}
+
+/*-------------Layout----------------*/
+
+#hdrimg {			/* Large image */
+	float: left; 			
+	width: 100%;
+	margin-bottom: 5px;
+	background: url('images/hdr.gif') repeat-x;
+	height: 120px;  	/* ie5x hack begins here */     
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	height: 120px;
+}
+html>body #hdrimg {
+	height: 150px;        /* ie5x hack ends here */
+}
+
+.rowcontainer {						/* Used to keep the divs in a row.  you can use this for any size of divs */
+	float: left;
+	margin-bottom: 5px;
+	width: 100%;
+	overflow: hidden;
+	background: #333;
+}
+
+#bttmbar { float: left; width: 100%; height: 35px; background: url('images/hdr.gif') bottom repeat-x }    /* Bottom copyright bar */
+
+
+/*------Columns: Note they dont add up to 100%, this is intentional to avoid problems!----------*/ 
+
+.fullcolumn { float: left; width: 99%;}		/* Full width column for a one column site */
+			
+.halfcolumn { float: left; width: 49%;}		/* Half width column for a two column site. */
+
+.onethirdcolumn { float: left; width: 32.3%; }		/* One third width column for a three column site */
+
+.twothirdcolumn { float: left; width: 65.3%; }		/* One third width column for a three column site */
+
+.quartercolumn { float: left; width: 24.5% }		/* One quarter width column for a four column site */
+
+.threequartercolumn { float: left; width: 73.5% }		/* Three quarter width column for a one and three thirds columns site */
+
+.fifthcolumn { float: left; width: 19.8% }		/* One fifth width column for a five column site */
+
+.twentiethcolumn {float: left; width: 4.8%;}		/* One tenth width colum, mostly to be used as a spacer */
+
+/*------------------------------Main Navigation------------------------------------------*/
+
+#nav { position: absolute; top: 144px; left: 0px; height: 25px; width: 100%}
+
+ul#nav  { margin: 0 }
+
+#nav li  /* Main nav list items */
+{
+	font-size: 13px;
+	float: left;
+	list-style: none;
+	text-align: center
+}
+
+#nav li a {   /* Main nav styles for all links */
+	display: block; /* Although display:block suggests a vertical list the float:left property under #nav li causes the menu to float inline */
+	margin-left: 5px; /* adds a gap between the tabs */
+	width: 90px; 	/* width of the tab */
+	line-height: 25px; /* height of the tab */
+	text-decoration: none;
+}
+	 
+#nav a:link, #nav a:visited  { color:#000000; font-style:bold; background: url('images/tab.gif') no-repeat 0 -25px }
+
+#nav a:hover, #nav a:active { color:#FFFFFF;  font-weight:200;background: url('images/tab.gif') no-repeat 0 0 }
+
+#nav a#current { color:#FFFFFF; font-weight:200; background: url('images/tab.gif') no-repeat 0 0 }
+
+
+
+/*-----------------------------------Other tags-----------------------------------------*/
+
+acronym { border-bottom: 1px dashed #999; cursor: help }
+
+/* lists */
+ul { margin: 5px 0 5px 35px; list-style: url('images/bullet.gif') }
+ol { margin: 5px 0 5px 35px; list-style: decimal }
+ol li, ul li { color: #fff; font-size: 0.8em; line-height: 1.4em }
+
+hr { margin: 10px 0px; height: 1px; background: #444; color: #444 }  /* rule styling */
+
+img {margin: 0 10px} /* all images styling */
+img.right {float: right}  /* right floating images */
+img.left {float: left}   /* left floating images */
+img.center {float: center} /*center floating images*/

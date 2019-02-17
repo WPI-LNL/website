@@ -1,0 +1,5 @@
+cp -f lnl-online.cgi lnl.cgi
+cp -f lnlwo-online.cgi lnlwo.cgi
+cp -f lnlpublic-online.cgi lnlpublic.cgi
+chgrp lnl2 lnl.cgi lnlwo.cgi lnlpublic.cgi
+lynx http://users.wpi.edu/~lnl/database/refresh.cgi

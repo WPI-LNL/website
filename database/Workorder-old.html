@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>LnL Workorder</TITLE>
+
+<!--#include file="header"-->
+
+<FONT FACE="ARIAL,HELVETICA">
+<H2 ALIGN=CENTER>Online Workorder</H2>
+
+<TABLE BORDER="0">
+  <TR>
+    <TD VALIGN=TOP><!--#include file="buttons"--></TD>
+<TD VALIGN=TOP><DIR><FONT FACE="ARIAL,HELVETICA" SIZE="-1">
+<P>Please complete this form as fully as possible.
+Once you have finished, click on the <B>Send to LnL</B> button at
+the bottom of the form and your request for services will be sent to
+Lens and Lights.  Upon approval of your request, you will receive a
+confirmation via email, so be sure to fill in your email address below
+or a confirmation will not be sent and the work order not processed.
+Please note that inadequately completed work orders will also not be
+processed. </P>
+
+<P>If you wish to file more than one work order, simply
+click on the <B>Erase all fields</B> button at the bottom of the form,
+and the fields will clear. </P> 
+
+<P>Before you start, you might want to look over our <A
+HREF="pricing/pricelist03-04.pdf">online price sheet</A>.</P>
+
+<P>Certain events require different setups, and sometimes it's hard to describe exactly what you need.
+Click on one of the pictures below for a floor plan of the various buildings around campus where we normally
+do events.  Once open, feel free to either edit them in Photoshop and email them to us (lnl@wpi.edu), or print
+them out and write on them, then turn them into our box located in the SAO office of the Campus Center.</P>
+
+<P>Important:<BR>
+Failure to guarantee receipt of this request for services by the
+Lens and Lights Club at least two (2) weeks prior to the event may
+result in the following late fees being charged:
+<ul>
+<lI>Less than 2 weeks notice: $25.00
+<lI>Less than 72 hours notice: $50.00
+</ul>
+<I>Any requests received less than 48 hours prior to
+the event will not be guaranteed services.</I></P>
+
+<P><I><B><FONT COLOR="#FFFF99">*</FONT> indicates that the field must
+be completed in order for the workorder to be submitted.</B></I></P>
+
+<FORM METHOD="POST" ACTION="http://lnl.wpi.edu/cgi-bin/workorder.cgi">
+
+<H4>Group Information</H4>
+
+<!-- Change this email address to be the VP's -->
+<INPUT TYPE="HIDDEN" NAME="LNLEMAIL" VALUE="jake@wpi.edu">
+
+<TABLE>
+  <TR>
+    <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><FONT COLOR="#FFFF99">*</FONT> Sponsoring Group:</FONT></TD>
+    <TD><INPUT NAME="Sponsor" size=40></TD>
+  </TR>
+  <TR>
+    <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><FONT
+    COLOR="#FFFF99">*</FONT> Program Coordinator:</FONT></TD>
+    <TD><INPUT NAME="fullname" size=40></TD>
+  </TR>
+  <TR>
+    <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><FONT
+    COLOR="#FFFF99">*</FONT> Email Address of Coordinator:</FONT></TD>
+    <TD><INPUT NAME="username" size=20></TD>
+  </TR>
+  <TR>
+    <TD ALIGN=RIGHT VALIGN=TOP><FONT SIZE="-1" FACE="ARIAL,HELVETICA">Address of Group:</FONT></TD>
+    <TD VALIGN=TOP><TEXTAREA NAME="Address" ROWS=3 COLS=30 WRAP=ON></TEXTAREA></TD>
+    </TR>
+    <TR>
+      <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1">Phone Number:</FONT></TD>
+      <TD><INPUT NAME="Phone Number" size=15><BR><BR></TD>
+    </TR>
+  <TR>
+    <TD COLSPAN=2><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><B>WPI FOPAL
+    String:</B><BR>
+    As of September 1998, student organizations and WPI offices MUST
+supply their <B>entire</B> three-part FOPAL string.  We are no longer
+    able to bill older account numbers for our services.  Failure to enter
+    all three parts of the string will result in your workorder being
+    returned to you unprocessed.  If you require assistance with the new
+    accounting structure, student organizations should email the <A
+    HREF="mailto:sao@wpi.edu">Student Activities Office</A> and campus
+    officers should email <A
+    HREF="mailto:bfinance@wpi.edu">bfinance@wpi.edu</A>.</FONT></TD>   
+  </TR>
+  <TR>
+    <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1">Fund</FONT></TD>
+    <TD><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><INPUT NAME="Fund" size=10></FONT></TD>
+  </TR>
+  <TR>
+    <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1">Organization</FONT></TD>
+    <TD><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><INPUT NAME="Organization" size=10></FONT></TD>
+  </TR>
+  <TR>
+    <TD VALIGN=TOP ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE="-1">Activity</FONT></TD>
+    <TD VALIGN=TOP><FONT FACE="ARIAL,HELVETICA" SIZE="-1"><INPUT VALUE="71973" NAME="Activity" size=5></FONT><BR><BR></TD>
+  </TR>
+</TABLE>
+
+
+
+<H4>Program Information</H4>
+
+<TABLE>
+  <TR>
+    <TD VALIGN=TOP ALIGN=RIGHT><FONT SIZE="-1"
+    FACE="ARIAL,HELVETICA"><FONT COLOR="#FFFF99">*</FONT> Name of
+    Program:</FONT></TD>
+    <TD VALIGN=TOP><INPUT NAME="Program Name" size=40></TD>
+  </TR>
+  <TR>
+    <TD VALIGN=TOP ALIGN=RIGHT><FONT SIZE="-1"
+    FACE="ARIAL,HELVETICA"><FONT COLOR="#FFFF99">*</FONT> Date
+    (mm/dd/yy):</FONT></TD>
+    <TD><INPUT NAME="Event Date" size=20></TD>
+  </TR>
+  <TR>
+    <TD VALIGN=TOP ALIGN=RIGHT><FONT SIZE="-1"
+    FACE="ARIAL,HELVETICA"><FONT COLOR="#FFFF99">*</FONT> Start
+    Time:</FONT></TD>
+    <TD><INPUT NAME="Start Time" size=20></TD>
+  </TR>
+  <TR>
+    <TD VALIGN=TOP ALIGN=RIGHT><FONT SIZE="-1"
+    FACE="ARIAL,HELVETICA"><FONT COLOR="#FFFF99">*</FONT> End
+    Time:</FONT></TD>
+    <TD><INPUT NAME="End Time" size=20></TD>
+  </TR>
+  <TR>
+    <TD VALIGN=TOP ALIGN=RIGHT><FONT SIZE="-1"
+    FACE="ARIAL,HELVETICA"><FONT COLOR="#FFFF99">*</FONT>
+    Location:</FONT></TD>
+    <TD><INPUT NAME="Location" size=40><BR><BR></TD>
+  </TR>
+  <TR>
+    <TD VALIGN=TOP COLSPAN=2 ALIGN=RIGHT><FONT SIZE="-1" FACE="ARIAL,HELVETICA">
+<FONT COLOR="#FFFF99">*</FONT> Services Needed (check as many items as
+    are applicable to your event):<BR>
+Lights<INPUT TYPE="checkbox" NAME="Services" VALUE="Lighting">&nbsp;&nbsp;&nbsp;
+Sound<INPUT TYPE="checkbox" NAME="Services" VALUE="Sound">&nbsp;&nbsp;&nbsp;
+Power<INPUT TYPE="checkbox" NAME="Services" VALUE="Power">&nbsp;&nbsp;&nbsp;
+<BR>
+Projection:&nbsp;&nbsp;&nbsp;
+16mm<INPUT TYPE="checkbox" NAME="Services" VALUE="16mm">&nbsp;&nbsp;&nbsp;
+35mm<INPUT TYPE="checkbox" NAME="Services" VALUE="35mm">&nbsp;&nbsp;&nbsp;
+70mm<INPUT TYPE="checkbox" NAME="Services" VALUE="70mm">&nbsp;&nbsp;&nbsp;
+<BR><BR></FONT></TD>
+</TR>
+<TR>
+  <TD COLSPAN="2" VALIGN=TOP ALIGN=RIGHT><FONT SIZE="-1"
+  FACE="ARIAL,HELVETICA">Name of person or persons Lens and Lights
+  should contact at the event:</FONT><BR>
+  <INPUT NAME="Contact" size=40></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<H4>Summary of Services Requested</H4>
+
+<P>Please fully describe the services you are requesting. 
+If there is additional information (diagrams, etc) that you 
+cannot include, please indicate that here and forward us the 
+information by mail or fax (831-6045).</P>
+
+<TEXTAREA NAME="Service Summary" ROWS=8 COLS=55 WRAP=ON></TEXTAREA><P>
+
+<INPUT TYPE="hidden" NAME="WOEND">
+
+<INPUT TYPE="submit" VALUE="Send request to LnL"> <INPUT TYPE="reset"
+VALUE="Erase all fields"> <P>
+
+<INPUT TYPE="hidden" NAME="mailto_subject" value="LnL Workorder">
+<INPUT TYPE="hidden" NAME="back_title" value="Workorder sent">
+<INPUT TYPE="hidden" NAME="back_url" value="http://lnl.wpi.edu">
+<INPUT TYPE="hidden" NAME="back_name" value="Lens and Lights Homepage">
+<INPUT TYPE="hidden" NAME="back_text" value="Your workorder has been
+sent to our Vice President.  He will contact you within a few days to
+confirm or deny your request for services.  If you have any questions,
+about our services or about your event in particular, please email
+lnl@wpi.edu.  Thank you for your business.">
+</FORM>
+
+
+</FONT>
+</DIR>
+</TD>
+</TR>
+</TABLE>
+</FONT>
+<BR>
+<FONT FACE="ARIAL,HELVETICA" SIZE="-2">
+<ADDRESS><A HREF="mailto:lnl@wpi.edu">lnl@wpi.edu</A></ADDRESS>
+Last modified: <!--#config timefmt="%b %d, %Y, %H:%M %Z"--><!--#echo
+var="LAST_MODIFIED"--><BR></FONT>
+</BODY>
+</HTML>

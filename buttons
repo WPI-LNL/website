@@ -1,0 +1,45 @@
+<!--Side Menu table-->
+<table width="168" border="0" cellspace="0" cellpadding="0 
+	align="center">
+        <tr>
+          <td align="center" width="168" height="65" bgcolor="#000000"><a 
+href="http://lnl.wpi.edu/index.html"><img 
+src="http://lnl.wpi.edu/images/lnllogo.jpg" 
+align="center" 
+width="130" height="130" border=0 alt="LnL"></a></td>
+        </tr>
+        <tr>
+          <td width="168" height="100%" valign="top" bgcolor="#000000">
+<table width="168" border="0" cellspacing="1" cellpadding="3">
+  <tr>
+    <td align="center"><p class="navtop">Lens and Lights</p></td>
+  </tr>
+  <tr>
+    <td><a href="http://lnl.wpi.edu/members.html" 
+class="nav">Members</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://lnl.wpi.edu/info.html" class="nav">About 
+LNL</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://lnl.wpi.edu/p_index.html" 
+class="nav">Projection</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://lnl.wpi.edu/contact.html" 
+class="nav">Contact</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://users.wpi.edu/~lnl/database/wo.cgi" 
+class="nav">File a Workorder</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://lnl.wpi.edu/pricing/pricelist04.pdf" 
+tabindex="5" 
+class="nav">Prices</a></td>
+  </tr>
+</table>
+</td>
+        </tr>
+      </table>

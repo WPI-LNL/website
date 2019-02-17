@@ -1,0 +1,34 @@
+#AddType text/html .html
+#AddHandler server-parsed .html
+ErrorDocument 403 http://lnl.wpi.edu/error403.html
+
+<Files "db.cgi">
+       AuthName LnLDB
+       AuthType EGNetID
+#       AuthAuthoritative on
+       Require valid-user
+
+       Anonymous nobody
+       Anonymous_MustGiveEmail off
+       Anonymous_LogEmail off
+       Anonymous_NoUserId on
+</Files>
+
+<Files "workorder.cgi">
+       AuthName LnLDB
+       AuthType EGNetID
+#       AuthAuthoritative on
+       Require valid-user
+
+       Anonymous nobody
+       Anonymous_MustGiveEmail off
+       Anonymous_LogEmail off
+       Anonymous_NoUserId on
+</Files>
+
+<Files "copier.html">
+       AuthName LnLDB
+       AuthType EGNetID
+#       AuthAuthoritative on
+#       Require user lnl mdodd 
+</Files>

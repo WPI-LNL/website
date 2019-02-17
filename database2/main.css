@@ -1,0 +1,169 @@
+body {
+	background-color: white;
+	color: black;
+	font-family: Arial, sans-serif;	font-size: small;	margin: 8px;	margin-top: 3px;
+}a {
+	color: darkblue;
+}a:visited {
+	color: darkblue;
+}
+/***************************************************/
+.gwt-DialogBox {border: 2px solid #AAAAAA; background-color: white;}.gwt-DialogBox .Caption {
+	background-image: url(images/gray_gradient.gif);	background-repeat: repeat-x;	padding: 4px;	padding-bottom: 8px;	font-weight: bold;	cursor: default;
+}.gwt-MenuBar {
+	background-color: #C3D9FF;	cursor: default;
+}.gwt-MenuItem {
+	font-size: 80%;	margin: 1px;	cursor: default;
+}.gwt-MenuItem-selected {
+	background-color: #E8EEF7;
+}.gwt-StackPanel {
+	background-color: white;	border: 1px solid #AAAAAA;	width: 15em;
+}.gwt-StackPanel .gwt-StackPanelItem {
+	background-image: url(images/gray_gradient.gif);	background-repeat: repeat-x;	background-color: #EEEEEE;	cursor: pointer;	cursor: hand;
+}.gwt-StackPanel .gwt-StackPanelItem-selected {}
+
+/***************************************************/
+
+.dlg-AboutText {
+	width: 24em;
+	font-size: 80%;
+}
+
+.dlg-DayView {
+	width: 24em;
+	font-size: 80%;
+}
+
+.CalendarWidget {
+  border: 1px solid #ACA899;
+}
+
+.CalendarWidget .navbar {
+  width: 100%;
+  background-color: #C3D9FF;
+  vertical-align: middle;
+  border-bottom: 1px solid #ACA899;
+}
+
+.CalendarWidget .navbar .gwt-Button {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.CalendarWidget .table {
+  font: 10pt sans-serif;
+  text-align: center;
+}
+
+.CalendarWidget .weekheader {
+  background-color: #ACA899;
+}
+
+.CalendarWidget .weekheader .days {
+  width: 3em;
+}
+
+.CalendarWidget .cell {
+  cursor:pointer;
+}
+
+.CalendarWidget .cell .gwt-HTML {
+  border: 1px solid #ACA899;
+}
+
+.CalendarWidget .cell .gwt-HTML span {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+}
+
+.CalendarWidget .low .gwt-HTML {
+  background-color: #CCFFCC;
+  font-weight: bold;
+}
+
+.CalendarWidget .med .gwt-HTML {
+  background-color: #FFFFCC;
+  font-weight: bold;
+}
+
+.CalendarWidget .high .gwt-HTML {
+  background-color: #FFCCCC;
+  font-weight: bold;
+}
+
+.CalendarWidget .event-today .gwt-HTML {
+  background-color: #FFCC66;	
+  font-weight: bold;
+}
+
+.CalendarWidget .today .gwt-HTML {
+  background-color: #C3D9FF;
+}
+
+.CalendarWidget .day .gwt-HTML {
+  border: 1px solid #C3D9FF;
+} 
+
+TABLE.sortableTable TD  {
+	border-bottom:solid #93BEE2 1px;
+	BORDER-RIGHT:1px solid #93BEE2;
+	border-left:1px solid #93BEE2;
+	border-top:1px solid #93BEE2;
+}
+
+.tableHeader{
+	font-family:tahoma,sans-serif;
+	font-size:12px;
+	color:#FFFFFF;
+	font-weight:bold;
+	background: #104A7B;
+}
+
+.headerStyle{
+	font-family:tahoma,sans-serif;
+	font-size:12px;
+	color:#FFFFFF;
+	font-weight:bold;
+	cursor:pointer;cursor:hand;
+ }
+
+.tableHeader2{
+	font-family:tahoma,sans-serif;
+	font-size:12px;
+	color:#000000;
+	font-weight:bold;
+	background: #FFFFFF;
+	cursor:pointer;cursor:hand;
+}
+
+.tableRowA{
+	font-family:tahoma,sans-serif;
+	font-size:11px;
+	color:#000096;
+	background: #FFFFFF;
+}
+
+.tableRowB{
+	font-family:tahoma,sans-serif;
+	font-size:11px;
+	color:#000096;
+	background: #CCCCCC;
+ }
+ 
+.MemberPopup {
+	background-image: url(images/gray_gradient.gif);
+	background-repeat: repeat-x;
+	border: 1px solid #AAAAAA;
+	padding: 4px;
+}
+
+.MemberPopupName {
+	font-size: 80%;
+	font-weight: bold;
+}
+
+.MemberPopupText {
+	font-size: 80%;
+	font-style: italic;
+}

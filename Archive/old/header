@@ -1,0 +1,57 @@
+<? include "./functions/pageformat.php" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>WPI - Lens and Lights</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Keywords" content="lighting sound projection 16mm 35mm 70mm audio show music dj s1 s2 s3 l1 l2 l3 p35 p70 lens lights">
+<meta name="Description" content="WPI Lens and Lights Club.  Provoding professional quality lighting, sound, and 35/70mm projection to Worcester Polytech and surrounding areas since 1962.
+<meta name="Author" content="WPI Lens and Lights">
+<meta name="Language" content="en">
+<link rel="stylesheet" href="site2.css" type="text/css">
+</head>
+
+<body bgcolor="#000000" topmargin="0" leftmargin="0" rightmargin=0">
+<!--Top Nav-->
+<table width="100%" border="1" bordercolor="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="images/banner.jpg" alt="WPI Lens and Lights Club" border="0"></td>
+  </tr>
+  <tr>
+    <td>
+      <table bgcolor="#000000" width="100%" align="center" border="0" 
+cellspacing="0" cellpadding="2">
+        <tr height=25>
+          <td class="navhead" width=120><a href="index.html" tabindex="1" 
+class="nav">Home</a></td>
+          <td class="navhead" width=120><a href="members.html" 
+tabindex="2" class="nav">Members</a></td>
+          <td class="navhead" width=120><a href="info.html" tabindex="3" 
+class="nav">About Club</a></td>
+<!--          <td class="navhead" width=120><a href="p_index.html" 
+tabindex="4" class="nav">Projection</a></td>
+-->          <td class="navhead" width=120><a href="contact.html" 
+tabindex="5" 
+class="nav">Contact</a></td>
+          <td class="navhead" width=150><a 
+href="http://lnl.wpi.edu/database/wo.cgi" tabindex="6" 
+class="nav">File a Workorder</a></td>
+	<td class="navhead">&nbsp</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!--Main table-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#000000" bordercolor="#111111">
+  <tr>
+    <td width="168" valign="top">
+      <table width="168" border="0" cellspace="0" cellpadding="0 align="center">
+        <tr>
+          <td align="center" width="168" height="65" bgcolor="#000000"><a 
+href="index.php"><img src="images/lnllogo.jpg" align="center" width="130" 
+height="133" border=0 alt="LnL"></a></td>
+        </tr>
+        <tr>
+          <td width="168" height="100%" valign="top" bgcolor="#000000">

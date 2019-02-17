@@ -1,0 +1,19 @@
+/* Special CSS file containing fixes because IE wasn't rendering fieldset backgrounds properly */
+
+fieldset {
+	position: relative;
+	margin-top: 1em;
+	padding-top: 1.5em;
+}
+
+legend {
+	position: absolute;
+	top: -0.5em;
+	left: 0.5em;
+	margin-top: -5px;
+}
+	
+input.checkbox {
+	border: none;
+	background: #808080;
+}

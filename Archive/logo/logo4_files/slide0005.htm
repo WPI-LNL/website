@@ -1,0 +1,347 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../logo4.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Slide 1</title>
+<meta name=Description content="5/26/2002">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {
+		sld.style.visibility="visible"
+		return
+	}
+	if( MakeNotesVis() ) return
+	runAnimations = _InitAnimations();
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+function MakeSldVis()
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis()
+{
+	if( !IsNts() ) return false
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) {
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.getAttribute("filter")!="" }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+		if( g_animItemsToHide ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+	return g_animUseRuntime;
+}
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="6"/>
+ <o:regrouptable v:ext="edit">
+  <o:entry new="1" old="0"/>
+ </o:regrouptable>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:white' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:415px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><v:rect id="_x0000_s6181"
+  style='position:absolute;left:0;top:0;width:10in;height:540pt;
+  mso-wrap-style:none;v-text-anchor:middle' fillcolor="black [1]"
+  strokecolor="black [1]">
+  <v:shadow color="gray [2]"/>
+ </v:rect><![if !vml]><img border=0 v:shapes="_x0000_s6181"
+ src="slide0005_image001.gif" style='position:absolute;top:0%;left:0%;
+ width:100.36%;height:100.48%'><![endif]><v:group id="_x0000_s6182" style='position:absolute;
+  left:191pt;top:108.125pt;width:343.125pt;height:311.125pt' coordorigin="300,645"
+  coordsize="2745,2489">
+  <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+   <v:stroke joinstyle="miter"/>
+   <v:path gradientshapeok="t" o:connecttype="rect"/>
+  </v:shapetype><v:shape id="_x0000_s6149" type="#_x0000_t202" style='position:absolute;
+   left:1307;top:1450;width:702;height:903;rotation:2474793fd;mso-wrap-style:none;
+   v-text-anchor:top-baseline' o:regroupid="1" filled="f" fillcolor="#bbe0e3 [4]"
+   stroked="f" strokecolor="black [1]">
+   <v:fill color2="white [0]"/>
+   <v:shadow color="gray [2]"/>
+   <v:textbox style='mso-fit-shape-to-text:t'/>
+  </v:shape><v:group id="_x0000_s6150" style='position:absolute;left:801;top:1658;
+   width:1030;height:1037' coordorigin="1440,2640" coordsize="288,336"
+   o:regroupid="1">
+   <v:rect id="_x0000_s6151" style='position:absolute;left:1440;top:2880;
+    width:288;height:96;mso-wrap-style:none;v-text-anchor:middle' fillcolor="yellow"
+    strokecolor="yellow">
+    <v:shadow color="gray [2]"/>
+   </v:rect><v:rect id="_x0000_s6152" style='position:absolute;left:1320;top:2760;
+    width:336;height:96;rotation:270;mso-wrap-style:none;v-text-anchor:middle'
+    fillcolor="yellow" strokecolor="yellow">
+    <v:shadow color="gray [2]"/>
+   </v:rect></v:group><v:group id="_x0000_s6153" style='position:absolute;
+   left:658;top:2047;width:859;height:741' coordorigin="1104,3026" coordsize="240,240"
+   o:regroupid="1">
+   <v:line id="_x0000_s6154" style='position:absolute' from="1113,3026" to="1113,3266"
+    strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line><v:line id="_x0000_s6155" style='position:absolute' from="1104,3264"
+    to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line></v:group><v:group id="_x0000_s6156" style='position:absolute;
+   left:529;top:2356;width:644;height:556' coordorigin="1104,3026" coordsize="240,240"
+   o:regroupid="1">
+   <v:line id="_x0000_s6157" style='position:absolute' from="1113,3026" to="1113,3266"
+    strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line><v:line id="_x0000_s6158" style='position:absolute' from="1104,3264"
+    to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line></v:group><v:group id="_x0000_s6159" style='position:absolute;
+   left:414;top:2590;width:516;height:445' coordorigin="1104,3026" coordsize="240,240"
+   o:regroupid="1">
+   <v:line id="_x0000_s6160" style='position:absolute' from="1113,3026" to="1113,3266"
+    strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line><v:line id="_x0000_s6161" style='position:absolute' from="1104,3264"
+    to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line></v:group><v:group id="_x0000_s6162" style='position:absolute;
+   left:300;top:2850;width:329;height:284' coordorigin="1104,3026" coordsize="240,240"
+   o:regroupid="1">
+   <v:line id="_x0000_s6163" style='position:absolute' from="1113,3026" to="1113,3266"
+    strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line><v:line id="_x0000_s6164" style='position:absolute' from="1104,3264"
+    to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+    <v:shadow color="gray [2]"/>
+   </v:line></v:group><v:group id="_x0000_s6165" style='position:absolute;
+   left:1514;top:645;width:1531;height:1476;rotation:180' coordorigin="1396,2736"
+   coordsize="428,478" o:regroupid="1">
+   <v:group id="_x0000_s6166" style='position:absolute;left:1536;top:2736;
+    width:288;height:336' coordorigin="1440,2640" coordsize="288,336">
+    <v:rect id="_x0000_s6167" style='position:absolute;left:1440;top:2880;
+     width:288;height:96;mso-wrap-style:none;v-text-anchor:middle' fillcolor="yellow"
+     strokecolor="yellow">
+     <v:shadow color="gray [2]"/>
+    </v:rect><v:rect id="_x0000_s6168" style='position:absolute;left:1320;
+     top:2760;width:336;height:96;rotation:270;mso-wrap-style:none;
+     v-text-anchor:middle' fillcolor="yellow" strokecolor="yellow">
+     <v:shadow color="gray [2]"/>
+    </v:rect></v:group><v:group id="_x0000_s6169" style='position:absolute;
+    left:1496;top:2862;width:240;height:240' coordorigin="1104,3026"
+    coordsize="240,240">
+    <v:line id="_x0000_s6170" style='position:absolute' from="1113,3026" to="1113,3266"
+     strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line><v:line id="_x0000_s6171" style='position:absolute' from="1104,3264"
+     to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line></v:group><v:group id="_x0000_s6172" style='position:absolute;
+    left:1460;top:2962;width:180;height:180' coordorigin="1104,3026"
+    coordsize="240,240">
+    <v:line id="_x0000_s6173" style='position:absolute' from="1113,3026" to="1113,3266"
+     strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line><v:line id="_x0000_s6174" style='position:absolute' from="1104,3264"
+     to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line></v:group><v:group id="_x0000_s6175" style='position:absolute;
+    left:1428;top:3038;width:144;height:144' coordorigin="1104,3026"
+    coordsize="240,240">
+    <v:line id="_x0000_s6176" style='position:absolute' from="1113,3026" to="1113,3266"
+     strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line><v:line id="_x0000_s6177" style='position:absolute' from="1104,3264"
+     to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line></v:group><v:group id="_x0000_s6178" style='position:absolute;
+    left:1396;top:3122;width:92;height:92' coordorigin="1104,3026" coordsize="240,240">
+    <v:line id="_x0000_s6179" style='position:absolute' from="1113,3026" to="1113,3266"
+     strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line><v:line id="_x0000_s6180" style='position:absolute' from="1104,3264"
+     to="1344,3264" strokecolor="yellow" strokeweight="2.25pt">
+     <v:shadow color="gray [2]"/>
+    </v:line></v:group></v:group></v:group><![if !ppt]><img border=0
+ v:shapes="_x0000_s6182,_x0000_s6149,_x0000_s6151,_x0000_s6152,_x0000_s6154,_x0000_s6155,_x0000_s6157,_x0000_s6158,_x0000_s6160,_x0000_s6161,_x0000_s6163,_x0000_s6164,_x0000_s6167,_x0000_s6168,_x0000_s6170,_x0000_s6171,_x0000_s6173,_x0000_s6174,_x0000_s6176,_x0000_s6177,_x0000_s6179,_x0000_s6180"
+ src="slide0005_image002.gif" style='position:absolute;top:19.75%;left:26.35%;
+ width:48.19%;height:58.55%'><![endif]>
+ <div v:shape="_x0000_s6149" class=O style='position:absolute;top:36.62%;
+ left:44.94%;width:12.45%;height:23.13%;visibility:hidden'><span
+ style='font-family:"Arial Black";font-size:489%;color:yellow'>N</span></div>
+</p:slide></div>
+
+</body>
+
+</html>

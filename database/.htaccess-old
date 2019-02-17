@@ -1,0 +1,24 @@
+#AddType text/html .html
+#AddHandler server-parsed .html
+ErrorDocument 403 http://lnl.wpi.edu/error403.html
+
+<Files "db.cgi">
+#       AuthPAM_Enabled on
+       AuthName LnLDB
+       AuthType Basic
+       AuthAuthoritative off
+       Require valid-user
+
+       Anonymous nobody
+       Anonymous_MustGiveEmail off
+       Anonymous_LogEmail off
+       Anonymous_NoUserId on
+</Files>
+
+<Files "copier.html">
+#       AuthPAM_Enabled on
+       AuthName LnLDB
+       AuthType Basic
+       AuthAuthoritative on
+       Require user lnl rbreznak 
+</Files>

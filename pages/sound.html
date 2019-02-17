@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lens and Lights | Sound</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap-carousel-custom.css" rel="stylesheet">
+
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+       
+      }
+      
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-66611753-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <!-- NAVBAR ================================================== -->
+    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+    <div class="container navbar-wrapper">
+
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../index.html">Lens and Lights</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="lighting.html">Lighting</a></li>
+              <li><a href="projection.html">Projection</a></li>
+              <li class="active"><a href="sound.html">Sound</a></li>
+              <li><a href="#PriceModal" data-toggle="modal">Price List</a></li>
+              <li><a href="/workorder">Workorder</a></li>
+              <li><a href="/my">My Account</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
+
+    </div><!-- /.container -->
+
+<!-- PriceModal -->
+<div id="PriceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Price List</h3>
+  </div>
+  <div class="modal-body">
+    <p><b>Download the LnL Price List here</b></p>
+    <p><a href="../assets/pdf/pricelist.pdf"><img src="../assets/img/home_images/pdf.jpeg" width="100" height="100"></a></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+  </div>
+</div>
+
+<div id="myAccountModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Members Area</h3>
+  </div>
+  <div class="modal-body">
+    <p><b>This feature is coming soon.</b></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+  </div>
+</div>
+
+    <div class="container">
+  
+  <!-- Begin Carousel -->
+              <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                
+                  <div class="item active">
+                    <img src="../assets/img/sound/Sound-1.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Allen and Heath MixWizard</h4>
+                      <p>One of our two 16 channel Allen and Heath boards.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-2.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>A&H GL4000 on the Quad.</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-3.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Small event (S2) at Goat's Head Restaurant</h4>
+                      <p>This is part of a typical sound setup at the Goat's Head Restaurant.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-4.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Amps at large concert</h4>
+                      <p>For larger events, LnL uses our full PA. For this show, we rented two more amp racks to add even more power.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-5.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Wall of Sound</h4>
+                      <p>Our annual Wall of Sound usually takes place during Quadfest. Anyone can play a song for a dollar that'll go to charity.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-6.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Amps at the annual Wall of Sound</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-7.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Wall of Sound</h4>
+                      <p>Another view of our annual Wall of Sound</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-8.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Yamaha LS9</h4>
+                      <p>Lens and Lights owns a Yamaha LS9 32-channel digital board</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-9.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Microphone Setup at Goats Head Restaurant</h4>
+                      <p>Lens and Lights does small setups in the Goats Head Restaurant for small bands</p>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../assets/img/sound/Sound-10.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Whirlwind Snake head</h4>
+                    </div>
+                  </div>
+                
+                
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+              <div class="clearfix"> </div>
+      <!--End Carousel --> 
+      
+      <div class="hero-unit">
+            <h1>Sound</h1>
+            <p />
+<p>
+		LnL has been providing sound reinforcement to the WPI community since the early 1970s. 
+		Whether you need a microphone for a single presenter in the Odeum, or an entire concert 
+		PA for a professional band, LnL has the equipment, personnel, and technical expertise 
+		necessary to make your event both affordable and successful.
+	</p>
+	
+	<p>
+		All of our speakers are manufactured by Eastern Acoustic Works (EAW) and are typically organized 
+		by the size of the event they are suitable for. However, for larger events like the WPI FIRST 
+		Robotics Regional and BattleCry, more speakers are needed. For events like these we will often 
+		use all of the speakers in our inventory.
+	</p>
+	
+	<h2>Large Events</h2>
+	
+	<p>
+		For large events such as concerts and other professional performances you may have seen 
+		in Alden Memorial, Harrington Auditorium or on the Quad, we use:
+	</p>
+		<ul style="margin-left:20px;">
+			<li>4 EAW KF850s- 
+		
+			According to EAW, the “KF850 Series loudspeakers are the
+			world touring standard, accepted in more technical riders than any other loudspeaker.”</li>
+			
+			<li>4 EAW SB1000s - Large subwoofers</li>
+			<li>6 EAW SM200iH - monitors, which allow “professional musicians and 
+			the audio professionals who support them the ability to customize on-stage monitor systems 
+			to the needs of the performing ensemble and venue.” </li>
+			<li>Allen and Health GL4000</li>
+			<li><a href="http://www.mackie.com/products/sr56-8/index.html">Mackie SR40-8</a></li>
+			<li><a href="http://www.yamahaproaudio.com/products/mixers/ls9/features.html">Yamaha LS9-32</a></li>
+			<li><a href="http://www.behringer.com/EN/Products/X32.aspx">Behringer X32</a></li>
+		</ul>	
+	
+	
+	<p>
+		The KF850s and SB1000s are tuned with a UX8800 processor that EAW claims “no other rack-mounted digital processor can approach ... 
+		in terms of dramatically advancing current and future EAW loudspeaker performance” and are 
+		powered by Crown I-T4000 and I-T8000 amplifiers. 
+		This setup allows us to remotely monitor our speakers and ensure that nothing can be over-driven, providing clean 
+		and powerful sound without any distortion.
+	</p>
+		
+	<h2>Medium and Small Evnets</h2>
+	<p>
+	For smaller events than those described above, we have the following equipment available 
+	from EAW’s LA Series, which “brings together professional components and rugged construction 
+	with EAW's total system engineering to create compact, portable loudspeakers ideally 
+	suited to small venue live performance” 
+	</p>
+	<ul style="margin-left:20px;">
+		<li>4 EAW LA325s</li>
+		<li>2 EAW LA128s</li>
+		<li>2 EAW LA215s, often seen in the Goat's Head</li>
+	</ul>
+	
+	<p>
+	These speakers are powered by QSC PLX3602 and PLX3402 amplifiers, 
+	and are perfect for small bands and acoustics. They will pleasantly fill a small venue 
+	very easily and are powerful enough to handle events in Alden as well. We also use the 
+	Allen and Heath Mixwizard3 16:2 mixer for these kinds of events.
+	</p>
+	
+	<p>
+	When it comes to microphones for any event we use the industry standard 
+	<a href="http://www.shure.com/americas/products/microphones/sm/sm58-vocal-microphone">Shure SM58</a> 
+	and <a href="http://www.shure.com/americas/products/microphones/sm/sm57-instrument-microphone">SM57</a>. 
+	We also have many other professional microphones available. A few of these are listed below:
+	</p>
+	<ul style="margin-left:20px;">
+		<li><a href="http://north-america.beyerdynamic.com/shop/mp/microphones/vocals-and-instruments/stage-vocals/wired-microphones/m-88-tg.html">Beyerdymanic M-88</a></li>
+		<li><a href="http://www.akg.com/site/products/powerslave,id,261,pid,261,nodeid,2,_language,EN.html">AKG D112</a> for kick-drums</li>
+		<li><a href="http://www.shure.com/americas/products/microphones/sm/sm81-instrument-microphone">Sure SM81</a> condenser microphones</li>
+	</ul>
+	
+	<p>
+	This only covers some of our inventory, as we have enough to handle any event necessary. 
+	We also have a full suite of four high end wireless microphones for your convenience. 
+	Whether you require a handheld or a headset, we can provide the mobility you need for your event.
+	</p>
+	
+	<p>
+	This huge selection of equipment makes it possible for us to provide high quality 
+	sound virtually anywhere on campus. We can accommodate demanding shows with professional 
+	equipment and technical knowledge. We are able to support even the busiest times of the year 
+	(NSO, Homecoming, Parents Weekend, Quadfest, etc.) by providing up to 5 live systems at 
+	the same time. Please let us know if you have any questions regarding how we provide this 
+	service. We would love to work with you to figure out how we can make your event as 
+	successful and affordable as possible. 
+	</p>
+
+
+<div class="clearfix"> </div>
+
+</div>
+
+ <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Lens and Lights</p>
+      </footer>
+
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

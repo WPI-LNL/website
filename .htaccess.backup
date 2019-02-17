@@ -1,0 +1,7 @@
+AddHandler fastcgi-script .fcgi
+AddHandler cgi-script .py
+RewriteEngine On
+
+<Files "*.html">
+	RedirectMatch 301 ~lnl/([^/]*html)$ http://lnl.wpi.edu/$1
+</Files>
