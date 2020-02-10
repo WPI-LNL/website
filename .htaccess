@@ -2,7 +2,7 @@
 SetHandler default-handler
 </Files>
 
-AddHandler fastcgi-script .fcgi
+# AddHandler fastcgi-script .fcgi
 AddHandler cgi-script .py
 RewriteEngine On
 
@@ -13,19 +13,9 @@ RewriteRule ^(.*)$ http://lnl.wpi.edu/$1 [L,R=301]
 
 RewriteRule ^(~lnl/.*)$ http://lnl.wpi.edu/$1 [L,R=301]
 RewriteRule ^(/~lnl/.*)$ http://lnl.wpi.edu/$1 [L,R=301]
-RewriteRule ^(~lnl/database/.*)$ http://lnl.wpi.edu/database/$1 [L,R=301]
-
-RewriteRule ^(idt-help/?)$ http://lnl.wpi.edu/idt-help.png [L,R=301]
-RewriteRule ^(idt-help\.png/)$ http://lnl.wpi.edu/idt-help.png [L,R=301]
-RewriteRule ^(workorder)$ http://lnl.wpi.edu/workorder/[L,R=301]
-Redirect 301 /workorder.html http://lnl.wpi.edu/workorder/contact
 
 RewriteRule ^(media/.*)$ - [L]
 RewriteRule ^(static/.*)$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-
-RewriteCond %{REQUEST_URI} !^(/|/index.html|/PubCookie.reply|/database/|/robots.txt)$
-RewriteCond %{REQUEST_URI} !^/?(old_site_backups|database2|database|pages|Archive|Images|assets|cookies|css|database|examples|headshots|images|jquery|js|newsite|public|rental_contracts|sharepoint|~lnl)/
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
@@ -39,8 +29,6 @@ ExpiresByType text/x-javascript "access 1 hour"
 ExpiresByType image/x-icon "access 1 day"
 </IfModule>
 ## EXPIRES CACHING ##
-
-# RewriteRule ^(.*)$ mysite.fcgi/$1 [QSA,L]
 
 # Wait until we confirm everything is working before we try anything.
 PassengerEnabled On
