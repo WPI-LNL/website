@@ -1,365 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Lens and Lights | Lighting</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- Le styles -->
-	<link href="../old_dependencies/css/bootstrap-carousel-custom.css" rel="stylesheet">
-
-	<style>
-		body {
-			padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-			
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="We love lighting at Lens and Lights - it's in our name!">
+		<title>Lens and Lights | Lighting</title>
+		<base href="../">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+		  	ga('create', 'UA-66611753-1', 'auto');
+		  	ga('send', 'pageview');
+		</script>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+	<body>
+		<header>
+			<div id="system-alert"></div>
+			<nav id="main-nav" class="navbar mb-4 justify-content-between">
+				<h1 style="color: white; padding-top: 5px" class="h3"><img id="brand" src="assets/ico/LNL-logo-transparent.png" onclick="window.location.href='index.html';" alt="LNL Logo"/></h1>
+				<i class="fas fa-bars fa-2x" id="menu" onclick="toggleMenu();"></i>
+				<i class="fas fa-bars" id="menu-sm" onclick="toggleMenu();"></i>
+				<nav class="my-2 my-md-0 mr-md-3" id="nav">
+					<a class="p-2 text-light" href="about.html" title="About">About</a>
+					<a class="p-2 text-light" href="services/lighting.html" title="Lighting">Lighting</a>
+					<a class="p-2 text-light" href="services/sound.html" title="Sound">Sound</a>
+					<a class="p-2 text-light" href="services/projection.html" title="Projection">Projection</a>
+					<a class="p-2 text-light" href="pricing/" title="Pricing">Pricing</a>
+					<a class="p-2 text-light" href="workorder/" title="Workorder">Workorder</a>
+					<a class="p-2 text-light" href="db/" title="Login">My&nbsp;Account</a>
+				</nav>
+			</nav>
+		</header>
+		<div id="system-spacer"></div>
+		<div class="pt-5 pb-4"></div>
+		<div id="alert" class="alert-inline"></div>
+		<section class="pb-1 light">
+			<div id="slides" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item full active" style="background-image: url('assets/img/lighting/1.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Uplighting at Higgins House </span>
+							Lens and Lights can provide both indoor and outdoor uplighting for almost any event</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/2.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Large Dinners  </span>
+							We provide table lighting such as this for many large dinners throughout the year</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/3.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Casino Night </span>
+							Our setup for the 2019 Graduate Student Fellowship Casino Night utilizing a combination of LED and conventional fixtures</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/4.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">VEX Robotics - The WAVE @ WPI </span>
+							One of our largest and most complex events of the year</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/5.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">FIRST Robotics Districts </span>
+							Lens and Lights' large lighting setup for the annual FIRST Robotics District Competition.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/6.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Lighting the ceiling of Harrington </span>
+							Lens and Lights lit the ceiling of Harrington with some rented Vari-Lite VL3000s.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/7.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Lighting for Kap Slap </span>
+							Kap Slap was well lit using a combination of many LED and conventional fixtures.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/8.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">V-Truss Rainbow </span>
+							The crowd at Kap Slap dancing in a rainbow of colors using ColorBlazes.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/9.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Suitcase Semiformal - Fire and Ice </span>
+							Alden is divided by color to keep with the theme "Fire and Ice".</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/10.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">ColorKinetics ColorBlaze </span>
+							One of our ColorBlazes in individual cell mode.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/11.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Dimmers </span>
+							A few of our dimmers which provide power to all of our lights.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/12.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Dimmer Rack Patch Bay </span>
+							This is the patch bay where we patch all of our fixtures to a dimmer channel.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/13.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Avolites Pearl Expert </span>
+							The Avolites Pearl Expert is one of our many lighting boards.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/14.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Lighting setup in Harrington </span>
+							Lens and Lights members hard at work setting up lights for the annual Spring Big Show.</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/lighting/15.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">FIRST Robotics Districts Truss Setup </span>
+							View of the truss being prepared for the FIRST Robotics Districts.</p>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control-next" href="#slides" role="button" data-slide="next">&rsaquo;</a>
+			</div>
+		</section>
+		<section class="text-white bg-dark up-shadow">
+			<div class="container py-5">
+				<h1 style="color: yellow">Lighting</h1>
+				<br>
+				<p>Since the early 1970s, we’ve been providing lighting services to our clients
+				all around the WPI community. Whether you need a simple spotlight on a podium, a full-scale show with complicated 
+				effects, or anything in between, we’ve got you covered. With a wide variety of professional lighting fixtures and equipment, 
+				and our experienced and dedicated team, you can rest assured that your event is in good hands.</p>
+				<p>Thanks to our long history operating at WPI we know the intricacies of every event space on campus and can use that knowledge
+				to make your event as bright as it can be. Our equipment inventory is large and varied with products from the best in the industry. 
+				From basic lighting fixtures using conventional halogen lamps, to moving head fixtures from renowned brands like High End Systems 
+				and VariLite, or consoles from Avolites and Electronic Theatre Controls, we have the equipment that can make your event truly shine. 
+				For those larger events, we have the experience and capability to rent more fixtures to really “wow” your attendees.</p>
+				<p>In addition to specific lighting equipment, we also own a substantial amount of rigging hardware for hanging lights virtually 
+				anywhere on campus. Box truss, chain hoists, and mobile lifts allow us to have versatility in creating the best lighting setup possible. 
+				We can do nearly anything - basic spot lights, stage washes, area lighting, uplighting, and more - all tailored to what your event 
+				needs. Please don’t hesitate to get in touch with us. We’re happy to work with you to create the perfect event!</p>
+				<!--<p>Our lighting services are used for a wide variety of events, including:</p>
+				<ul style="margin-left:20px;">
+					<li>Dances</li>
+					<li>Speeches</li>
+					<li>Band performances</li>
+					<li>Fashion shows</li>
+					<li>A capella performances</li>
+					<li>Dinners/Luncheons</li>
+					<li><em>Can We Talk?</em></li>
+					<li>Robotics Competitions (FRC Districts, BattleCry, VEX WAVE)</li>
+					<li>Relay For Life</li>
+					<li>and much more!</li>
+				</ul>-->
+			</div>
+		</section>
+		<section style="background-color: #262626">
+			<div class="container pt-4" style="color: white">
+				<h3 class="h4 mt-2" style="color: yellow">Equipment</h3>
+				<p class="mb-0 pb-2">Want to learn more about the equipment we use? Check out our Technical Overview for an in-depth look at our inventory.
+				<br><br><button class="btn btn-warning" onclick="window.location.href='equipment.html'">Learn More</button><br><br></p>
+			</div>
+		</section>
+		<!--Modal Views-->
+		<div class="modal" tabindex="-1" role="dialog" id="critical-alert">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header" id="alert-header">
+						<h5 class="modal-title" id="alert-title"></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" id="alert-message">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<form id="page-id">
+			<input hidden name="project_id" value="LNL">
+			<input id="dirID" hidden name="directory" value="">
+			<input id="pageID" hidden name="page_id" value="">
+		</form>
+		<footer role="contentinfo" class="pt-5 pb-4 bg-black m-0">
+			<div class="container px-5">
+				<div class="row">
+					<div class="col-12 col-md">
+						<img class="fluid" id="long" src="assets/ico/LNL-logo-long.png" alt="LNL Logo - Long"/>
+						<small class="d-block mb-3" style="color: #bbb;">&nbsp;Worcester&nbsp;Polytechnic&nbsp;Institute<br>&nbsp;&copy; 2019 - <span id="year">2020</span></small>
+						<p style="font-size: 1.2em" class="pl-2"><a href="https://instagram.com/wpilnl" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram text-light"></i></a>&nbsp;&nbsp;
+							<a href="https://facebook.com/wpilnl" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook text-light"></i></a>&nbsp;&nbsp;
+							<a href="mailto:lnl@wpi.edu" title="Email Us"><i class="fas fa-envelope text-light"></i></a></p>
+					</div>
+					<div id="spacer" class="col-6 col-md"></div>
+					<div class="col-6 col-md">
+						<h6>About</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="about.html">About</a></li>
+							<li><a href="history.html">History</a></li>
+							<li><a href="about.html#exec">Exec</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md">
+						<h6>Services</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="services/sound.html">Sound</a></li>
+							<li><a href="">Lighting</a></li>
+							<li><a href="services/projection.html">Projection</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md">
+						<h6>Resources</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="pricing/">Pricing</a></li>
+							<li><a href="workorder/">Submit Workorder</a></li>
+							<li><a href="db/">My&nbsp;Account</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md">
+						<h6>Contact</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="join/">Join Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="legal/privacy/">Privacy&nbsp;Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script>
+		function setYear() {
+			document.getElementById("year").innerHTML = (new Date()).getFullYear();
+			getNotifications();
 		}
 		
-	</style>
-	<link href="../old_dependencies/css/bootstrap-responsive.css" rel="stylesheet">
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-		ga('create', 'UA-66611753-1', 'auto');
-		ga('send', 'pageview');
-	
-	</script>
+		function toggleMenu(){
+        	if (document.getElementById("nav").style.display == "block"){
+        		document.getElementById("nav").style.display = "none";
+        	}else{
+        		document.getElementById("nav").style.display = "block";
+        	}
+        }
 
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Fav and touch icons -->
-	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-</head>
-<body>
-	<!-- NAVBAR ================================================== -->
-	<!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
-	<div class="container navbar-wrapper">
-		<div class="navbar navbar-inverse">
-			<div class="navbar-inner">
-				<!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<a class="brand" href="../index.html">Lens and Lights</a>
-				<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../about.html">About</a></li>
-						<li><a href="../contact.html">Contact</a></li>
-						<li><a href="../history.html">History</a></li>
-						<li class="active"><a href="lighting.html">Lighting</a></li>
-						<li><a href="projection.html">Projection</a></li>
-						<li><a href="sound.html">Sound</a></li>
-						<li><a href="../pricing/pricelist.pdf">Price List</a></li>
-						<li><a href="../workorder">Workorder</a></li>
-						<li><a href="../my">My Account</a></li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div><!-- /.navbar-inner -->
-		</div><!-- /.navbar -->
-	</div><!-- /.container -->
-	<!-- PriceModal -->
-	<div id="PriceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Price List</h3>
-		</div>
-		<div class="modal-body">
-			<p><b>Download the LnL Price List here</b></p>
-			<p><a href="../assets/pdf/pricelist.pdf"><img src="../assets/img/home_images/pdf.jpeg" width="100" height="100"></a></p>
-		</div>
-		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		</div>
-	</div>
-	<div id="myAccountModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Members Area</h3>
-		</div>
-		<div class="modal-body">
-			<p><b>This feature is coming soon.</b></p>
-		</div>
-		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		</div>
-	</div>
-	<div class="container">
-		<!-- Begin Carousel -->
-		<div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-			
-				<div class="item active">
-					<img src="../assets/img/lighting/Lighting-1.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>FIRST Robotics Regionals Setup</h4>
-						<p>Each year WPI hosts the FIRST Robotics Regional Competition. Lens and Lights provides both lighting and sound services.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-2.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>L2 Setup in Goats Head Restaurant</h4>
-						<p>This is an example of a small lighting (L2) setup in the Goats Head Restaurant using just a few ColorBlasts</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-3.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>RHC Suitcase Semiformal 2012 (L4)</h4>
-						<p>Lens and Lights went all out for the 2012 RHC Suitcase Semiformal utilizing a combination of LED and conventional fixtures</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-4.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>FIRST Robotics Regionals</h4>
-						<p>Lens and Lights' large lighting (L4) setup for the annual FIRST Robotics Regional Competition.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-5.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Two of our dimmer racks</h4>
-						<p>This is a pair of our dimmer racks that are used behind the scenes at many L3s and L4s.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-6.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Lighting setup in Harrington</h4>
-						<p>Lens and Lights members hard at work setting up lights for the annual Spring Big Show.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-7.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Lighting for SocComm's Big Show</h4>
-						<p>Final lighting setup (L4) for the 2012 Spring Big Show featuring Matisyahu.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-8.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Lighting the ceiling of Harrington</h4>
-						<p>Lens and Lights lit the ceiling of Harrington with some rented Vari-Lite VL3000s.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-9.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Lighting for Kap Slap</h4>
-						<p>Kap Slap (L4) was lit well using a combination of many LED and conventional fixtures.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-10.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>V-Truss Rainbow</h4>
-						<p>The crowd at Kap Slap (L4) dancing in a rainbow of colors using ColorBlazes.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-11.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Avolites Pearl Expert</h4>
-						<p>The Avolites Pearl Expert is one of our many lighting boards.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-12.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Suitcase Semiformal - Fire and Ice</h4>
-						<p>Alden is divided by color to keep with the theme "Fire and Ice".</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-13.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>ColorKinetics ColorBlaze</h4>
-						<p>One of our ColorBlazes in individual cell mode.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-14.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>Dimmer Rack Patch Bay</h4>
-						<p>This is the patch bay where we patch all of our fixtures to a dimmer channel.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-15.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>FIRST Robotics Regionals Truss Setup</h4>
-						<p>Aerial view of the truss setup for the FIRST Robotics Regional.</p>
-					</div>
-				</div>
-				
-				<div class="item">
-					<img src="../assets/img/lighting/Lighting-16.jpg.orig.jpg" alt="">
-					<div class="carousel-caption">
-						<h4>FIRST Robotics Regionals Truss Setup</h4>
-						<p>Aerial view of the truss setup for the FIRST Robotics Regional.</p>
-					</div>
-				</div>
-			
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
-		<div class="clearfix"> </div>
-		<!--End Carousel --> 
-		<div class="hero-unit">
-			<h1>Lighting</h1>
-			<p />
-			<p>We are Lens and Lights, a WPI club which provides quality lighting, sound, and projection services to the WPI campus and surrounding area. We are a group of very passionate individuals who are extremely passionate about what we do!</p>
-			<p>
-				LnL has been providing lighting services to the WPI community since the early 1970s. 
-				Whether you need a single spotlight on a podium in the Odeum, or a full lighting setup 
-				for a large concert, LnL has the equipment, personnel, and technical expertise necessary
-				to make your event both affordable and successful.
-			</p>
-			<p>Our lighting services are used for a wide variety of events that include:</p>
-			<ul style="margin-left:20px;">
-				<li>Dances</li>
-				<li>Speeches</li>
-				<li>Band performances</li>
-				<li>Fashion shows</li>
-				<li>A capella performances</li>
-				<li>Dinners/Luncheons</li>
-				<li>Can We Talk?</li>
-				<li>FIRST Robotics Competitions (FRC Regionals, BattleCry)</li>
-				<li>Relay For Life</li>
-				<li>and much more!</li>
-			</ul>
-			<p>
-				We have done lighting for popular bands such as Reel Big Fish, Ok Go, 
-				Yellow Card, They Might Be Giants, Lupe Fiasco, Relient K, and Matisyahu; and 
-				comedians such as Kevin Hart and Judah Friedlander. 
-			</p>
-			<h2>Boards</h2>
-			<p>The following is a list of the boards that LnL owns to allow us to work 
-				multiple lighting events at once ranging from a small speech to a large concert.
-			</p>
-			<ul style="margin-left:20px;">
-				<li>Leprecon 512 (small event)</li>
-				<li>Leprecon LP-1512 (small events)</li>
-				<li>Strand 200 (small events)</li>
-				<li>High End Systems Hog 500 (medium events)</li>
-				<li>Leprecon 2000 (large conventional events)</li>
-				<li>Avolites Pearl Expert with Touchwing (medium events)</li>
-				<li>High End Systems Hog 4 (large events)</li>
-				<li>High End Systems Road Hog 4 (large events)</li>
-			</ul>
-			<br />
-			<h2>Conventional Fixtures and Dimmers</h2>
-			<p>LnL also owns many conventional fixtures, which allow us to light any type of event requested.</p>
-			<ul style="margin-left:20px;">
-				<li>39 - <a href="http://www.etcconnect.com/product.overview.aspx?Id=20080">Source Four</a> (10, 19, 26, 36, 50 degree)</li>
-				<li>40 - <a href="http://www.etcconnect.com/product.overview.aspx?Id=20084">Source Four Par</a> (WFL, MFL, NSP, VNSP)</li>
-				<li>17 - Altman PAR 64</li>
-				<li>7 - Fresnel</li>
-				<li>2 - <a href="http://www.altmanltg.com/borderlights-econo-strip.htm">Altman Econo Strip Borderlights</a></li>
-				<li>1 - Source Four Mini</li>
-				<li>2 - <a href="http://www.leprecon.com/products/product/7">36 Channel Leprecon Dimmers</a></li>
-				<li>2 - <a href="http://www.leprecon.com/products/product/7">24 Channel Leprecon Dimmers</a></li>
-				
-			</ul>
-			<br />
-			<h2>Intelligent Fixtures</h2>
-			<p>
-				Additionally, LnL also owns many fixtures that give you functionality beyond a 
-				conventional fixture such as moving heads and LED lighting that are commonly used 
-				at dances and concerts. 
-			</p>
-			<ul style="margin-left:20px;">
-				<li>2 - High End Systems SolaFrame 2000 High CRI</li>
-				<li>6 - Martin MAC Aura</li>
-				<li>12 - ETC Lustr+ Desire D60</li>
-				<li>4 - Vari-Lite VL2000 Spot</li>
-				<li>2 - <a href="http://www.elationlighting.com/ProductDetails.aspx?ItemNumber=1752&Category=">Elation Platinum Spot 5R Pro</a></li>
-				<li>4 - Phillips Color Kinetics ColorBlaze 48</li>
-				<li>12 - <a href="http://www.colorkinetics.com/ls/rgb/colorblast12tr/">Phillips Color Kinetics Colorblast 12</a></li>
-				<li>12 - Chauvet EZpar T6 USB</li>
-				<li>2 - <a href="http://www.diversitronics.com/catalog/index.html">1500W Diversitronics Mark 2000 Strobe</a></li>
-			</ul>
-			<p>
-				To make all this happen, LnL owns a large amount of rigging equipment that allows us 
-				to hang lighting virtually anywhere on campus. You will typically see large lighting 
-				setups in the Odeum, Alden, Harrington, and on the Quad.
-			</p>
-			<h2>Rigging</h2>
-			<ul style="margin-left:20px;">
-				<li>6 – <a href="http://www.cm-et.com/products/lodestar.aspx">Columbus McKinnon Lodestar 1-Ton chain motors</a></li>
-				<li>2 – <a href="http://www.cmworks.com/ProductDetail.aspx?id=2724">Columbus McKinnon Series 622 1-Ton 30ft chain falls</a></li>
-				<li>4 – <a href="http://www.appliednn.com/l_CU-16m.php">Applied L-16 towers</a></li>
-				<li>1 set – <a href="http://www.appliednn.com/l_CMT.php">Applied L-25 towers</a></li>
-				<li>96-feet of <a href="http://www.tomcatglobal.com/products/core/44/core-20-truss-205x205.html">20.5” box truss</a></li>
-				<li>80-feet of <a href="http://www.appliednn.com/t_SBT-12x12AP.php">12” box truss</a></li>
-				<li><a href="http://www.genielift.com/en/products/new-equipment/aerial-work-platforms/awp-super-series/index.htm">Genie AWP-30S</a></li>
-				<li>Electric pallet jack</li>
-			</ul>
-			<p>
-				This huge selection of equipment allows us to provide professional lighting virtually 
-				anywhere on campus. We can accommodate demanding shows with professional equipment and
-				technical knowledge. We are able to support even the busiest times of the year (NSO, 
-				Homecoming, Parents Weekend, Quadfest, etc.) by providing many live systems at 
-				the same time. Please let us know if you have any questions regarding how we provide 
-				this service. We would love to work with you to figure out how we can make your event 
-				as successful and affordable as possible.
-			</p>
-			<div class="clearfix"> </div>
-		</div>
-		<!-- FOOTER -->
-		<footer>
-			<p class="pull-right"><a href="#">Back to top</a></p>
-			<p>&copy; 2020 Lens and Lights</p>
-		</footer>
-	</div> <!-- /container -->
-
-	<!-- Le javascript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="../old_dependencies/js/jquery.js"></script>
-	<script src="../old_dependencies/js/bootstrap-transition.js"></script>
-	<script src="../assets/js/bootstrap-alert.js"></script>
-	<script src="../assets/js/bootstrap-modal.js"></script>
-	<script src="../assets/js/bootstrap-dropdown.js"></script>
-	<script src="../assets/js/bootstrap-scrollspy.js"></script>
-	<script src="../assets/js/bootstrap-tab.js"></script>
-	<script src="../assets/js/bootstrap-tooltip.js"></script>
-	<script src="../assets/js/bootstrap-popover.js"></script>
-	<script src="../assets/js/bootstrap-button.js"></script>
-	<script src="../assets/js/bootstrap-collapse.js"></script>
-	<script src="../old_dependencies/js/bootstrap-carousel.js"></script>
-	<script src="../assets/js/bootstrap-typeahead.js"></script>
-</body>
+		window.onload = setYear;
+		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    	<script src="assets/js/api.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
 </html>

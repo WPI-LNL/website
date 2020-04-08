@@ -1,0 +1,191 @@
+/* GLOBAL STYLES
+ -------------------------------------------------- */
+body {
+	background-color: black;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a i {
+	color: black;
+}
+
+hr {
+	background-color: white;
+}
+
+#brand {
+	width: 30%;
+	cursor: pointer;
+}
+
+#main-nav {
+	background-color: black;
+	width: 100%;
+	margin-bottom: 0 !important;
+	margin-top: 0;
+	box-shadow: 0 2px 10px;
+	position: fixed;
+	z-index: 75;
+}
+
+header:not(.inline) {
+	position: fixed;
+	z-index: 75;
+	width: 100%;
+}
+
+#menuBtn {
+	position: absolute;
+	right: 5%;
+}
+
+#menu, #menu-sm {
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+
+small {
+	display: none;
+}
+
+.alert {
+	margin-bottom: 0;
+}
+
+.alert-inline .alert {
+	border-radius: 0;
+}
+
+.bg-info h5 {
+	color: white;
+}
+
+.bg-warning a {
+	color: maroon;
+}
+
+.bg-warning a:hover{
+	text-decoration: underline;
+}
+
+.light {
+	background-color: #777;
+}
+
+.up-shadow {
+	box-shadow: 0 -2px 5px #222;
+}
+
+.carousel-item {
+	height: 32rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.slide-img {
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.carousel-control-next, .carousel-control-prev {
+	background-color: black;
+	height: 10%;
+	width: 5%;
+	margin: auto;
+	color: yellow;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
+	background-color: rgba(33, 33, 33, 0.7);
+	max-width: 25rem;
+}
+
+.full .carousel-caption {
+	bottom: 0;
+	width: 100%;
+	max-width: 100%;
+	left: 0;
+	background-color: rgba(33, 33, 33, 0.9);
+}
+
+.full .carousel-caption p {
+	margin-bottom: 0;
+}
+
+.head {
+	color: yellow;
+	font-weight: bold;
+}
+
+#long {
+	width: 100%;
+}
+
+footer {
+	width: 100%;
+	color: white;
+	border-top: 1px solid yellow;
+}
+
+footer li:hover {
+	text-decoration: underline;
+}
+
+footer a {
+	color: #aaa;
+}
+
+footer a:hover {
+	color: #aaa;
+}
+
+/* SMALLER SCREEN ADJUSTMENTS
+ -------------------------------------------------- */
+
+@media(max-width: 800px){
+	#long {
+		width: 50% !important;
+	}
+	#spacer {
+		display: none;
+	}
+	#nav {
+		text-align: center;
+	}
+}
+
+@media(max-width: 450px){
+	#menu {
+		display: block;
+	}
+	#nav {
+		display: none;
+	}
+	small {
+		display: inline;
+	}
+	.slide-img {
+		max-height: 40vh;
+	}
+	.carousel-control-next, .carousel-control-prev {
+		height: 15%;
+		width: 10%;
+	}
+}
+
+@media(max-width: 341px){
+	#menu {
+		display: none;
+	}
+	#menu-sm {
+		display: block;
+	}
+}

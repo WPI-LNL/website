@@ -1,264 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Lens and Lights | Projection</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="At LNL, we reel-y love a good movie! Our projectionists can operate films in 16 mm, 35 mm, 70 mm, and digital formats.">
+		<title>Lens and Lights | Projection</title>
+		<base href="../">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+		  	ga('create', 'UA-66611753-1', 'auto');
+		  	ga('send', 'pageview');
+		</script>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+	<body>
+		<header>
+			<div id="system-alert"></div>
+			<nav id="main-nav" class="navbar mb-4 justify-content-between">
+				<h1 style="color: white; padding-top: 5px" class="h3"><img id="brand" src="assets/ico/LNL-logo-transparent.png" onclick="window.location.href='index.html';" alt="LNL Logo"/></h1>
+				<i class="fas fa-bars fa-2x" id="menu" onclick="toggleMenu();"></i>
+				<i class="fas fa-bars" id="menu-sm" onclick="toggleMenu();"></i>
+				<nav class="my-2 my-md-0 mr-md-3" id="nav">
+					<a class="p-2 text-light" href="about.html" title="About">About</a>
+					<a class="p-2 text-light" href="services/lighting.html" title="Lighting">Lighting</a>
+					<a class="p-2 text-light" href="services/sound.html" title="Sound">Sound</a>
+					<a class="p-2 text-light" href="services/projection.html" title="Projection">Projection</a>
+					<a class="p-2 text-light" href="pricing/" title="Pricing">Pricing</a>
+					<a class="p-2 text-light" href="workorder/" title="Workorder">Workorder</a>
+					<a class="p-2 text-light" href="db/" title="Login">My&nbsp;Account</a>
+				</nav>
+			</nav>
+		</header>
+		<div id="system-spacer"></div>
+		<div class="pt-5 pb-4"></div>
+		<div id="alert" class="alert-inline"></div>
+		<section class="pb-1 light">
+			<div id="slides" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item full active" style="background-image: url('assets/img/projection/1.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">The Projection Booth </span>
+							Home in Upper FLAUD to our two Norelco projectors and two 16mm projectors</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/2.png');">
+						<div class="carousel-caption">
+							<p><span class="head">Lens </span>
+							A 70mm Lens mounted in one of our Norelco DP70s</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/3.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Shorts and Trailers </span>
+							Old reels of 35mm film</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/4.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Reels and Reels </span>
+							Lots of 16mm film stored on shelves</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/5.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">House Audio </span>
+							Lots of rackmount audio processing for the house system</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/6.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">Inside </span>
+							The inner workings inside one of the DP70s</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/7.jpg');">
+						<div class="carousel-caption">
+							<p><span class="head">35/70 mm Lens </span>
+							A 35/70 mm Scope film lens installed in one of the DP70s</p>
+						</div>
+					</div>
+					<div class="carousel-item full" style="background-image: url('assets/img/projection/9.png');">
+						<div class="carousel-caption">
+							<p><span class="head">Film Bench </span>
+							One of our projectionists inspects and splices together a new reel</p>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control-next" href="#slides" role="button" data-slide="next">&rsaquo;</a>
+			</div>
+		</section>
+		<section class="text-white bg-dark up-shadow">
+			<div class="container py-5">
+				<h1 style="color: yellow">Projection</h1>
+				<br>
+				<p>Lens and Lights started off in the winter of 1961-62 after a few WPI students took over two 35mm film
+					projectors that were left by the Navy ROTC program. Decades later, Lens and Lights still shows
+					movies every week in Upper Perreault Hall, bringing theater quality movie presentations in 16mm,
+					35mm, 70mm, and digital 2K with 5.1 surround sound. LNL shows a wide variety of films ranging from classic
+					80s Sci-Fi to movies fresh out of theaters - sometimes even before Blu-Ray release! Together with
+					student organizations (SocComm Films) and in partnership with individuals and professors (HUA Film
+					series, China Hub Series) we present what the community wants to see on the big screen. In summary,
+					LNL is a group of students who love the art of projection - both in classical (film) and modern
+					(digital 2K) formats.</p>
+				<p>Currently, we are one of the few remaining theaters that can present in both 35mm and 70mm film and
+					we keep our projectionists fully trained on its proper handling and use. When we do occasionally
+					present classic movies on 35mm or modern 70mm, we can do something no other theater in Worcester can
+					do. By request, our film distributor, as well as our contacts at the Library of Congress and the
+					Criterion Collection, can provide us with access to thousands of movies on film.</p>
+				<p>Please don’t hesitate to get in touch with us. We’re happy to work with you to create the perfect
+					movie presentation! We are also always on the lookout for new members, so reach out if you want to
+					learn more. Or come up to the booth behind Upper Perreault Hall after a movie or whenever
+					you see the lights on!</p>
+			</div>
+		</section>
+		<section style="background-color: #262626">
+			<div class="container pt-4" style="color: white">
+				<h3 class="h4 mt-2" style="color: yellow">Equipment</h3>
+				<p class="mb-0 pb-2">Want to learn more about our projectors? Check out our Technical Overview for an in-depth look at our inventory.
+				<br><br><button class="btn btn-warning" onclick="window.location.href='equipment.html'">Learn More</button><br><br></p>
+			</div>
+		</section>
+		<!--Modal Views-->
+		<div class="modal" tabindex="-1" role="dialog" id="critical-alert">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header" id="alert-header">
+						<h5 class="modal-title" id="alert-title"></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" id="alert-message">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<form id="page-id">
+			<input hidden name="project_id" value="LNL">
+			<input id="dirID" hidden name="directory" value="">
+			<input id="pageID" hidden name="page_id" value="">
+		</form>
+		<footer role="contentinfo" class="pt-5 pb-4 bg-black m-0">
+			<div class="container px-5">
+				<div class="row">
+					<div class="col-12 col-md">
+						<img class="fluid" id="long" src="assets/ico/LNL-logo-long.png" alt="LNL Logo - Long"/>
+						<small class="d-block mb-3" style="color: #bbb;">&nbsp;Worcester&nbsp;Polytechnic&nbsp;Institute<br>&nbsp;&copy; 2019 - <span id="year">2020</span></small>
+						<p style="font-size: 1.2em" class="pl-2"><a href="https://instagram.com/wpilnl" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram text-light"></i></a>&nbsp;&nbsp;
+							<a href="https://facebook.com/wpilnl" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook text-light"></i></a>&nbsp;&nbsp;
+							<a href="mailto:lnl@wpi.edu" title="Email Us"><i class="fas fa-envelope text-light"></i></a></p>
+					</div>
+					<div id="spacer" class="col-6 col-md"></div>
+					<div class="col-6 col-md">
+						<h6>About</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="about.html">About</a></li>
+							<li><a href="history.html">History</a></li>
+							<li><a href="about.html#exec">Exec</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md">
+						<h6>Services</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="services/sound.html">Sound</a></li>
+							<li><a href="services/lighting.html">Lighting</a></li>
+							<li><a href="">Projection</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md">
+						<h6>Resources</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="pricing/">Pricing</a></li>
+							<li><a href="workorder/">Submit Workorder</a></li>
+							<li><a href="db/">My&nbsp;Account</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md">
+						<h6>Contact</h6>
+						<ul class="list-unstyled text-small">
+							<li><a href="join/">Join Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="legal/privacy/">Privacy&nbsp;Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script>
+		function setYear() {
+			document.getElementById("year").innerHTML = (new Date()).getFullYear();
+			getNotifications();
+		}
+		
+		function toggleMenu(){
+        	if (document.getElementById("nav").style.display == "block"){
+        		document.getElementById("nav").style.display = "none";
+        	}else{
+        		document.getElementById("nav").style.display = "block";
+        	}
+        }
 
-    <!-- Le styles -->
-    <link href="../old_dependencies/css/bootstrap-carousel-custom.css" rel="stylesheet">
-
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-       
-      }
-      
-    </style>
-    <link href="../old_dependencies/css/bootstrap-responsive.css" rel="stylesheet">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-66611753-1', 'auto');
-      ga('send', 'pageview');
-    
-    </script>
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
-
-  <body>
-
-    <!-- NAVBAR ================================================== -->
-    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
-    <div class="container navbar-wrapper">
-
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="../index.html">Lens and Lights</a>
-          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../about.html">About</a></li>
-              <li><a href="../contact.html">Contact</a></li>
-              <li><a href="../history.html">History</a></li>
-              <li><a href="lighting.html">Lighting</a></li>
-              <li class="active"><a href="projection.html">Projection</a></li>
-              <li><a href="sound.html">Sound</a></li>
-              <li><a href="../pricing/pricelist.pdf" data-toggle="modal">Price List</a></li>
-              <li><a href="../workorder">Workorder</a></li>
-              <li><a href="../my">My Account</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!-- /.navbar-inner -->
-      </div><!-- /.navbar -->
-
-    </div><!-- /.container -->
-
-<!-- PriceModal -->
-<div id="PriceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Price List</h3>
-  </div>
-  <div class="modal-body">
-    <p><b>Download the LnL Price List here</b></p>
-    <p><a href="../assets/pdf/pricelist.pdf"><img src="../assets/img/home_images/pdf.jpeg" width="100" height="100"></a></p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-
-  </div>
-</div>
-
-<div id="myAccountModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Members Area</h3>
-  </div>
-  <div class="modal-body">
-    <p><b>This feature is coming soon.</b></p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-
-  </div>
-</div>
-
-    <div class="container">
-  
-  <!-- Begin Carousel -->
-              <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                
-                  <div class="item active">
-                    <img src="../assets/img/projection/1.jpg.orig.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>The Projection Booth</h4>
-                      <p>Home in Upper FLAUD to our two Norelco projectors and two 16mm projectors.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="item">
-                    <img src="../assets/img/projection/2.png" alt="">
-                    <div class="carousel-caption">
-                      <h4>Lens</h4>
-                      <p>A 70mm Lens mounted in one of our Norelco DP70s.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="item">
-                    <img src="../assets/img/projection/3.jpg.orig.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Shorts and Trailers</h4>
-                      <p>Old reels of 35mm film.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="item">
-                    <img src="../assets/img/projection/4.jpg.orig.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Reels and Reels</h4>
-                      <p>Lots of 16mm film stored on shelves.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="item">
-                    <img src="../assets/img/projection/5.jpg.orig.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>House Audio</h4>
-                      <p>Lots of rackmount audio processing for the house system.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="item">
-                    <img src="../assets/img/projection/6.jpg.orig.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Inside</h4>
-                      <p>The inner workings inside one of the Norelco projectors.</p>
-                    </div>
-                  </div>
-                  
-                
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-              </div>
-              <div class="clearfix"> </div>
-      <!--End Carousel --> 
-      
-      <div class="hero-unit">
-            <h1>Projection</h1>
-            <p></p>
-            <p>Lens and Lights started off in the winter of 1961-62 after a few WPI students took over two 35mm Simplex film projectors that were left by the Navy ROTC program. While Lens and Lights has grown into a much larger organization (see Lighting and Sound), 35mm movie projection is still a very important part of the club, with digital projection on the rise. Our current projection booth, at the top of Perreault Hall in Fuller Laboratory, is capable of showing 16mm, 35mm, 70mm and digital films. The projectors are all owned and operated by Lens and Lights members under the direction of the Head Projectionist, one of seven Executive Officers for the club. Lens and Lights shows movies on a weekly schedule in conjunction with the SocComm Films Committee.
-            	</p>
-<h2>16mm</h2>
-<p>
-The Perrault Hall projection booth is equipped with two Eiki 16mm projectors. These projectors are considered high quality in terms of 16mm projection, but are noticeably inferior to the 35mm full feature films. However, these projectors are ideal for showcasing the cartoons you grew up with! Occasionally before the feature presentation we project an older 16mm cartoon.
-</p><p>
-A desirable characteristic of the 16mm projectors is that they are fairly small and very portable. While in the past, Lens and Lights has moved the projectors around campus, they now permanently live in the Perrault Hall projection booth. However, with the small form factor comes several issues, most noticeably the lack of stereo sound and a poor image, at least when compared to the 35mm projectors. Despite their flaws, the 16mm projectors are well used by Lens and Lights and are part of the second Projectionist In Training session for new members interested in becoming a licensed Motion Picture Operator.
-</p>
-<h2>35mm</h2>
-<p>
-When Lens and Lights members talk about a projection event they are generally talking about a 35mm movie. In the Perrault Hall projection booth we own and operate two Norelco Todd-AO projectors. The two projectors we own are each over 50 years old and capable of running 35mm or 70mm film! The Head Projectionist is primarily responsible for keeping the two projectors in perfect running condition, but members who are a PIT III or higher do help out with the weekly maintenance and cleaning.
-</p><p>
-Projecting 35mm film is more complicated than 16mm film. We have a total of two lenses and three aperture plates for each projector. Through different combinations of lenses and aperture plates we can produce three different aspect ratios, 1.37:1, 1.85:1, and 2.35:1. Most modern movies are shot in 1.85:1, also referred to as "flat", or 2.35:1, or "scope". A flat image looks roughly like what you would see on a regular television screen, and is essentially just magnified and projected onto the screen for your viewing pleasure. A scope image actually has to be stretched by a special anamorphic lens to achieve the correct aspect ratio on the screen. The end result of a scope lens is a wider picture, something that a standard TV cannot replicate, though newer TVs are being created in a similar widescreen format.
-</p>
-<h2>70mm</h2>
-<p>
-Lens and Lights is one of the few collegiate groups in the country that is capable of projecting 70mm films. There are two key differences between 35 and 70mm film. The first is that 70mm film is twice as wide, which means a richer image. The second is the six track magnetic sound track, which is much better quality than the original optical stereo sound tracks found on older 35mm films. Today 35mm film has digital sound options which can provide a similar sound experience to a 70mm film, but nothing can compare to the quality of a 70mm image.
-</p><p>
-Unfortunately, 70mm film has only been used sparingly in the past two decades. The increased size of the film adds a lot of weight and makes the film much more difficult to work with. While it is still technically superior to 35mm film, most modern projection booths are not even capable of showing 70mm film. While we general do not show 70mm film, we do actively train PITs to properly thread a 70mm film, in the rare event that we are asked to screen one.
-</p>
-<h2>Digital</h2>
-<p>
-	In 2013, Lens and Lights acquired a <a href="http://www.christiedigital.com/en-us/cinema/cinema-products/digital-cinema-projectors/pages/christie-cp2210-dlp-digital-cinema-projector.aspx">Christie CP-2210</a>. Cited as "the most compact digital cinema projector in the world," the CP2210 delivers the 2K resolution that has been seen in cinemas across across the country. As production of 35mm film ends, digital projection has become the primary means of showing movies, removing the need for a two-projector changeover system. An all-in-one design ensures easy maintenance and operation. While the projector supports a variety of aspect ratios, only one set of lens is required. Movies now come on hard drives, the contents of which are "ingested" and and unlocked with a key that is emailed to us. The CP2210 can also handle "alternative content," allowing the use of a DVD player and computer (or anything that can connect to a DVI port) to show other material.
-</p>
-
-<h2>Projectionist In Training</h2>
-<p>
-In order to be allowed in the projection booth during a movie you must become a Projectionist In Training (PIT). The Commonwealth of Massachusetts requires anyone who operates a 35mm projector to be a Licensed Motion Picture Operator (MPO), or to be trained and directly supervised by a licensed projectionist. The PIT program was designed to train Lens and Lights members to become Licensed MPOs, and can be completed in as little as one year. The Head Projectionist is responsible for the training of PITs, though other licensed club members and alumni may hold PIT sessions, with permission from the Head Projectionist.
-</p><p>
-The PIT program is made up of six sessions. Each session can be completed in under an hour, but usually take longer in A Term due to the influx of new members. Before moving on to the next session you must demonstrate your knowledge to the Head Projectionist by attending movies and using the equipment. After completing a PIT VI there are three tests that must be completed. The first is the LnL Projection Test, which tests your knowledge of the equipment in the booth and basic booth safety. The second is the LnL Practical, which is a hands on and tests your practical knowledge of how to run a movie with a crew. The final test is the Massachusetts MPO Licensing Exam, a 50 True or False question test of basic projection skills and knowledge. To take the Massachusetts test you must be sponsored by a licensed projectionist, only by completing the PIT program and associated tests will you be sponsored by the Head Projectionist or any other licensed LnL member.
-</p>
-
-<h2>The following bullets show the PIT program:</h2>
-<ul>
-<li><B>PIT I</B> - Introduction to the Projection Booth</li>
-<li><B>PIT II</B> - Eiki 16mm Projectors</li>
-<li><B>PIT III</B> - Christie CP-2210 Projector (Digital)</li>
-<li><B>PIT IV</B> - Norelco Todd-AO Projectors (35mm)</li>
-<li><B>PIT V</B> - Norelco Todd-AO Projectors (70mm)</li>
-<li><B>PIT VI</B> - Crew Chiefing, Troubleshooting, and Major Maintenance</li>
-<li><B>LnL Projection Test</B> - Written Test</li>
-<li><B>LnL Practical Test</B> - Hands On Test</li>
-<li><B>MPO Licensing Exam</B> - 50 True/False Questions</li>
-</ul>
-<h2>Projection Laws</h2>
-<p>
-There are a number of Massachusetts laws governing the use of 35mm projectors. Most of the laws are from the days of nitrate film, which was highly flammable and therefore extremely dangerous to projectionists and audiences. Though the Perrault Hall projection booth is only equipped for modern "Safety Film" we are still required to have licensed projectionists. Upon completion of a PIT V the Head Projectionist will give you the Projectionist's Manual, a handbook of useful information and the Commonwealth laws on projection. The laws may also be available on the Commonwealth of Massachusetts website
-</p>
-<!--<h2>Projection Forms</h2>
-<p>
-There are two important forms for the Projection Program, the Cue Sheet and the Run Sheet, both found below. In addition to these two forms, the Head Projectionist is responsible for several other documents, such as the Projection tests and the Projectionist's Manual. These documents are generally only useful for the Head Projectionist and other MPOs, but they have been made available to anyone to view.
-</p>
-<ul>
-<li><B>Cue Sheet (<a href="/images/PDF/cuesheet.pdf">Film</a> | <a href="/images/PDF/dpcuesheet.pdf">Digital</a>)</B> - This sheet is filled out when a movie is prepared before being shown. The amount of time between cues and brief descriptions of the cue scenes helps the crew make flawless changeovers.
-</li>
-<li><B><a href="/images/PDF/runsheet.pdf">Run Sheet</a></B> - This form is filled out by the Crew Chiefs of each movie. It serves as a log of what happened in the booth during the movie. This information helps the Head Projectionist keep the booth in good running condition, as well as keeps track of PITs.
-</li>
-</ul>-->
-<div class="clearfix"> </div>
-
-</div>
-
- <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2020 Lens and Lights</p>
-      </footer>
-
-
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../old_dependencies/js/jquery.js"></script>
-    <script src="../old_dependencies/js/bootstrap-transition.js"></script>
-    <script src="../old_dependencies/js/bootstrap-alert.js"></script>
-    <script src="../old_dependencies/js/bootstrap-modal.js"></script>
-    <script src="../old_dependencies/js/bootstrap-dropdown.js"></script>
-    <script src="../old_dependencies/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../old_dependencies/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
-  </body>
+		window.onload = setYear;
+		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    	<script src="assets/js/api.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
 </html>
