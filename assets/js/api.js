@@ -6,7 +6,7 @@
 */
 
 var request;
-var base = "http://lnl.wpi.edu/api/v1/";
+var base = "https://lnl.wpi.edu/api/v1/";
 
 function getNotifications(){
 	document.getElementById("pageID").value = window.location.pathname;
