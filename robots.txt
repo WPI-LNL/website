@@ -4,3 +4,4 @@ Disallow: /db
 Disallow: /list/json
 Disallow: /assets/js
 Disallow: /assets/css
+Disallow: /software
