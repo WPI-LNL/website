@@ -141,6 +141,10 @@ footer {
 	border-top: 1px solid yellow;
 }
 
+footer li {
+	font-size: 0.9em;
+}
+
 footer li:hover {
 	text-decoration: underline;
 }
@@ -174,6 +178,12 @@ footer a:hover {
 	}
 	#nav {
 		display: none;
+		width: 100%;
+	}
+	#nav a {
+		display: block;
+		text-align: left;
+		border-bottom: 1px solid #222;
 	}
 	small {
 		display: inline;
