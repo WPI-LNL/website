@@ -17,6 +17,9 @@ RewriteRule ^(/~lnl/.*)$ http://lnl.wpi.edu/$1 [L,R=301]
 RewriteRule ^(media/.*)$ - [L]
 RewriteRule ^(static/.*)$ - [L]
 
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://lnl.wpi.edu/$1 [L,R]
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
 ExpiresActive On
