@@ -350,3 +350,38 @@ function bakeCookie(key, value, expire){
 	let expires = expire.toUTCString();
 	document.cookie = key + "=" + value + ";expires=" + expires + ";path=/;";
 }
+
+function getRedirects() {
+	request = $.ajax({
+		url: base + "sitemap",
+		type: "GET",
+		async: false
+	});
+	
+	request.done(function (response, textStatus, jqXHR){
+		if (jqXHR.status === 200){
+			listRedirects(response);
+		}else{
+			processError(jqXHR);
+		}
+	});
+}
+
+function listRedirects(data) {
+	redirects = false;
+	var dynamic_row = document.getElementById('more-links');
+	for (var i = 0; i < data.length; i++) {
+		let category = data[i]['category'];
+		if (document.getElementById(category) !== null) {
+			document.getElementById(category).innerHTML += '<li><a href="' + data[i]['path'] + '">' + data[i]['title'] + '</a></li>';
+		} else {
+			dynamic_row.innerHTML = '<div class="col-md-3 my-2"><h3 class="h4">' + data[i]['category'] + '</h3><ul class="list-unstyled" id="' + data[i]['category'] + '"><li><a href="' + data[i]['path'] + '">' + data[i]['title'] + '</a></li></ul></div>' + dynamic_row.innerHTML;
+		}
+		if (category == 'Redirects') {
+			redirects = true;
+		}
+	}
+	if (redirects) {
+		document.getElementById('additional-links').style.display = "block";
+	}
+}
