@@ -135,6 +135,19 @@ small {
 	object-position: top;
 }
 
+.card-dark {
+	background-color: #181818;
+	color: black
+}
+
+.card-dark .card-header {
+	color: white;
+}
+
+.card-dark .card-body {
+	background-color: white;
+}
+
 footer {
 	width: 100%;
 	color: white;
