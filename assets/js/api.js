@@ -78,22 +78,6 @@ function getOfficeHours(officers){
 	});
 }
 
-function getUpdates(){
-	request = $.ajax({
-		url: base + "hours/updates",
-		type: "GET",
-		async: false
-	});
-	
-	request.done(function (response, textStatus, jqXHR){
-		if (jqXHR.status === 200){
-			loadUpdates(response);
-		}else{
-			processError(jqXHR);
-		}
-	});
-}
-
 function load(data){
 	data.sort(function (a,b) {
 		var x = a['class']; var y = b['class'];
@@ -198,47 +182,63 @@ function loadOfficersWith(data){
 }
 
 function loadHours(officers, hours){
+	// Sort by position, then day of week
+	var rows = {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}, 7: {}}; // Keys correspond to position order
 	for (var i = 0; i < officers.length; i++) {
 		let officer = officers[i];
 		let name = officer["name"];
 		let title = officer["title"];
 		var email = "Not available";
 		var location = "CC Office";
+		var position = 7; // Defaults to 7 (any other positions would be listed after Webmaster sorted by day of week)
 		switch (title){
 			case "President": case "Interim President":
 				email = "lnl-p@wpi.edu";
+				position = 0;
 				break;
 				
 			case "Vice President": case "Interim Vice President":
 				email = "lnl-vp@wpi.edu";
+				position = 1;
 				break;
 				
 			case "Technical Director": case "Interim Technical Director":
 				email = "lnl-td@wpi.edu";
+				position = 2;
 				break;
 				
 			case "Head Projectionist": case "Interim Head Projectionist":
 				email = "lnl-hp@wpi.edu";
-				location = "Fuller Projection Booth";
+				position = 3;
 				break;
 				
 			case "Webmaster": case "Interim Webmaster":
 				email = "lnl-w@wpi.edu";
+				position = 6;
 				break;
 				
 			case "Treasurer": case "Interim Treasurer":
 				email = "lnl-t@wpi.edu";
+				position = 4;
 				break;
 				
 			case "Secretary": case "Interim Secretary":
 				email = "lnl-s@wpi.edu";
+				position = 5;
 				break;
 		}
 		var times = [];
+		var day = 8;
 		for (var j = 0; j < hours.length; j++){
 			if (hours[j]["officer"] === title){
+				if (j < day){
+					day = j;
+				}
 				let event = formatEvent(hours[j]);
 				times.push(event);
+				if (hours[j]["location"]) {
+					location = hours[j]["location"];
+				}
 			}
 		}
 		if (times.length == 0) {
@@ -246,24 +246,16 @@ function loadHours(officers, hours){
 		}
 		let output = times.join('<br>');
 		if (email != "Not available"){
-			document.getElementById("hours").innerHTML += "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+			rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
 		}else{
-			document.getElementById("hours").innerHTML += "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td>" + email + "</td></tr>";
+			rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td>" + email + "</td></tr>";
 		}
 	}
-	getUpdates();
-}
-
-function loadUpdates(data){
-	var count = 0;
-	for (var i = 0; i < data.length; i++){
-		if (new Date() < new Date(data[i]["expires"])){
-			count++;
-			document.getElementById("updates").innerHTML += "<div class='alert alert-info mb-3'>" + data[i]["message"] + "</div>";
+	for (var k = 0; k < Object.keys(rows).length; k++){
+		for (var m = 0; m < Object.keys(rows[k]).length; m++){
+			let dateKey = Object.keys(rows[k])[m];
+			document.getElementById("hours").innerHTML += rows[k][dateKey];
 		}
-	}
-	if (count > 0) {
-		document.getElementById("update-header").innerHTML = "Announcements";
 	}
 }
 
@@ -307,13 +299,17 @@ function formatEvent(event){
 	let min_end = event["hour_end"].split(":")[1];
 	var pm_start = "AM";
 	var pm_end = "AM";
+	if (hour_start >= 12){
+		pm_start = "PM";
+	}
+	if (hour_end >= 12){
+		pm_end = "PM";
+	}
 	if (hour_start > 12){
 		hour_start -= 12;
-		pm_start = "PM";
 	}
 	if (hour_end > 12){
 		hour_end -= 12;
-		pm_end = "PM";
 	}
 	return day + " from " + hour_start + ":" + min_start + " " + pm_start + " to " + hour_end + ":" + min_end + " " + pm_end;
 }
