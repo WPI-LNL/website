@@ -159,7 +159,7 @@ function postNotification(item, alerts, notifs){
 }
 
 function loadOfficersWith(data){
-	let officers = ["President", "Vice President", "Technical Director", "Head Projectionist", "Webmaster", "Treasurer", "Secretary"];
+	let officers = ["President", "Interim President", "Vice President", "Interim Vice President", "Technical Director", "Interim Technical Director", "Head Projectionist", "Interim Head Projectionist", "Webmaster", "Interim Webmaster", "Treasurer", "Interim Treasurer", "Secretary", "Interim Secretary"];
 	for (var i = 0; i < data.length; i++){
 		let title = data[i]["title"];
 		for (var j = 0; j < officers.length; j++){
@@ -189,7 +189,7 @@ function loadHours(officers, hours){
 		let name = officer["name"];
 		let title = officer["title"];
 		var email = "Not available";
-		var location = "CC Office";
+		var location = "Office";
 		var position = 7; // Defaults to 7 (any other positions would be listed after Webmaster sorted by day of week)
 		switch (title){
 			case "President": case "Interim President":
@@ -245,10 +245,12 @@ function loadHours(officers, hours){
 			times.push("~ Not available ~");
 		}
 		let output = times.join('<br>');
-		if (email != "Not available"){
-			rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
-		}else{
-			rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td>" + email + "</td></tr>";
+		if (title != "Advisor") {
+			if (email != "Not available"){
+				rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+			}else{
+				rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td>" + email + "</td></tr>";
+			}
 		}
 	}
 	for (var k = 0; k < Object.keys(rows).length; k++){
