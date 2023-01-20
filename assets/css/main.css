@@ -72,6 +72,15 @@ small {
 	text-decoration: underline;
 }
 
+.notification-top-bar {
+	top: 0;
+	left: 0;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-align: center;
+}
+
 .light {
 	background-color: #777;
 }
