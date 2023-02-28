@@ -136,23 +136,15 @@ function postNotification(item, alerts, notifs){
 		}else if (type === "warning"){
 			style = "alert-danger";
 		}
-		if (pageId === "/"){
-			document.getElementById("alert").innerHTML = "<div class='alert p-2 " + style + "'>" + message + "</div>";
-			document.getElementById("main-nav").style.boxShadow = "none";
-			if (classType === 1){
-				return 2;
-			}
+		if (classType === 1){
+			document.getElementById("system-alert").innerHTML = "<div class='" + style + " p-2 text-center'>" + message + "</div>";
+			document.getElementById("system-spacer").innerHTML = "<div class='p-2 text-center'>" + message + "</div>";
+		}else if (classType === 2){
+			document.getElementById("alert").innerHTML = "<div class='alert " + style + "'>" + message + "</div>";
+			return 2;
 		}else{
-			if (classType === 1){
-				document.getElementById("system-alert").innerHTML = "<div class='" + style + " p-2 text-center'>" + message + "</div>";
-				document.getElementById("system-spacer").innerHTML = "<div class='p-2 text-center'>" + message + "</div>";
-			}else if (classType === 2){
-				document.getElementById("alert").innerHTML = "<div class='alert " + style + "'>" + message + "</div>";
-				return 2;
-			}else{
-				document.getElementById("alert").innerHTML = "<div class='alert " + style + " alert-dismissible fade show' role='alert'>" + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-				return 2;
-			}
+			document.getElementById("alert").innerHTML = "<div class='alert " + style + " alert-dismissible fade show' role='alert'>" + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
+			return 2;
 		}
 	}
 	return 0;
