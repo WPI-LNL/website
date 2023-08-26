@@ -136,30 +136,22 @@ function postNotification(item, alerts, notifs){
 		}else if (type === "warning"){
 			style = "alert-danger";
 		}
-		if (pageId === "/"){
-			document.getElementById("alert").innerHTML = "<div class='alert p-2 " + style + "'>" + message + "</div>";
-			document.getElementById("main-nav").style.boxShadow = "none";
-			if (classType === 1){
-				return 2;
-			}
+		if (classType === 1){
+			document.getElementById("system-alert").innerHTML = "<div class='" + style + " p-2 text-center'>" + message + "</div>";
+			document.getElementById("system-spacer").innerHTML = "<div class='p-2 text-center'>" + message + "</div>";
+		}else if (classType === 2){
+			document.getElementById("alert").innerHTML = "<div class='alert " + style + "'>" + message + "</div>";
+			return 2;
 		}else{
-			if (classType === 1){
-				document.getElementById("system-alert").innerHTML = "<div class='" + style + " p-2 text-center'>" + message + "</div>";
-				document.getElementById("system-spacer").innerHTML = "<div class='p-2 text-center'>" + message + "</div>";
-			}else if (classType === 2){
-				document.getElementById("alert").innerHTML = "<div class='alert " + style + "'>" + message + "</div>";
-				return 2;
-			}else{
-				document.getElementById("alert").innerHTML = "<div class='alert " + style + " alert-dismissible fade show' role='alert'>" + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-				return 2;
-			}
+			document.getElementById("alert").innerHTML = "<div class='alert " + style + " alert-dismissible fade show' role='alert'>" + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
+			return 2;
 		}
 	}
 	return 0;
 }
 
 function loadOfficersWith(data){
-	let officers = ["President", "Vice President", "Technical Director", "Head Projectionist", "Webmaster", "Treasurer", "Secretary"];
+	let officers = ["President", "Interim President", "Vice President", "Interim Vice President", "Technical Director", "Interim Technical Director", "Head Projectionist", "Interim Head Projectionist", "Webmaster", "Interim Webmaster", "Treasurer", "Interim Treasurer", "Secretary", "Interim Secretary"];
 	for (var i = 0; i < data.length; i++){
 		let title = data[i]["title"];
 		for (var j = 0; j < officers.length; j++){
@@ -189,7 +181,7 @@ function loadHours(officers, hours){
 		let name = officer["name"];
 		let title = officer["title"];
 		var email = "Not available";
-		var location = "CC Office";
+		var location = "Office";
 		var position = 7; // Defaults to 7 (any other positions would be listed after Webmaster sorted by day of week)
 		switch (title){
 			case "President": case "Interim President":
@@ -245,10 +237,12 @@ function loadHours(officers, hours){
 			times.push("~ Not available ~");
 		}
 		let output = times.join('<br>');
-		if (email != "Not available"){
-			rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
-		}else{
-			rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td>" + email + "</td></tr>";
+		if (title != "Advisor") {
+			if (email != "Not available"){
+				rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+			}else{
+				rows[position.toString()][day.toString()] = "<tr><td>" + name + "</td><td>" + title + "</td><td>" + location + "</td><td>" + output + "</td><td>" + email + "</td></tr>";
+			}
 		}
 	}
 	for (var k = 0; k < Object.keys(rows).length; k++){
