@@ -28,27 +28,21 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous">
+		</script>
+		<script> 
+			$(function(){
+			$("#header").load("/assets/html/header.html"); 
+			$("#footer").load("/assets/html/footer.html"); 
+			});
+		</script> 
 	</head>
 	<body>
-		<header>
-			<div id="system-alert"></div>
-			<nav id="main-nav" class="navbar mb-4 justify-content-between">
-				<h1 style="color: white; padding-top: 5px" class="h3"><img id="brand" src="assets/ico/LNL-logo-transparent.png" onclick="window.location.href='/';" alt="LNL Logo"/></h1>
-				<i class="fas fa-bars fa-2x" id="menu" onclick="toggleMenu();"></i>
-				<i class="fas fa-bars" id="menu-sm" onclick="toggleMenu();"></i>
-				<nav class="my-2 my-md-0 mr-md-3" id="nav">
-					<a class="p-2 text-light" href="about.html" title="About">About</a>
-					<a class="p-2 text-light" href="services/lighting.html" title="Lighting">Lighting</a>
-					<a class="p-2 text-light" href="services/sound.html" title="Sound">Sound</a>
-					<a class="p-2 text-light" href="services/projection.html" title="Projection">Projection</a>
-					<a class="p-2 text-light" href="pricing/" title="Pricing">Pricing</a>
-					<a class="p-2 text-light" href="db/" title="Login">My&nbsp;Account</a>
-				</nav>
-			</nav>
-		</header>
+		<div id="header"></div>
 		<section class="bg-dark">
-			<div id="system-spacer"></div>
-			<div class="pt-5 pb-4"></div>
 			<br>
 			<div class="container" id="alert"></div>
 			<div class="container mt-4" style="color: white">
@@ -262,53 +256,7 @@
 			<input id="dirID" hidden name="directory" value="">
 			<input id="pageID" hidden name="page_id" value="">
 		</form>
-		<footer role="contentinfo" class="pt-5 pb-4 bg-black m-0">
-			<div class="container px-5">
-				<div class="row">
-					<div class="col-12 col-md">
-						<img class="fluid" id="long" src="assets/ico/LNL-logo-long.png" alt="LNL Logo - Long"/>
-						<small class="d-block mb-3" style="color: #bbb;">&nbsp;Worcester&nbsp;Polytechnic&nbsp;Institute<br>&nbsp;&copy; 2019 - <span id="year">2020</span></small>
-						<p style="font-size: 1.2em" class="pl-2"><a href="https://instagram.com/wpilnl" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram text-light"></i></a>&nbsp;&nbsp;
-							<a href="https://facebook.com/wpilnl" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook text-light"></i></a>&nbsp;&nbsp;
-							<a href="https://www.youtube.com/channel/UC5sap_N-wodpAtQGdrhhfIg" target="_blank" title="Check us out on YouTube"><i class="fab fa-youtube text-light"></i></a>&nbsp;&nbsp;
-							<a href="mailto:lnl@wpi.edu" title="Email Us"><i class="fas fa-envelope text-light"></i></a></p>
-					</div>
-					<div id="spacer" class="col-6 col-md"></div>
-					<div class="col-6 col-md">
-						<h6>About</h6>
-						<ul class="list-unstyled text-small">
-							<li><a href="about.html">About</a></li>
-							<li><a href="history.html">History</a></li>
-							<li><a href="join/">Join Us</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-md">
-						<h6>Services</h6>
-						<ul class="list-unstyled text-small">
-							<li><a href="services/sound.html">Sound</a></li>
-							<li><a href="services/lighting.html">Lighting</a></li>
-							<li><a href="services/projection.html">Projection</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-md">
-						<h6>Resources</h6>
-						<ul class="list-unstyled text-small">
-							<li><a href="pricing/">Pricing</a></li>
-							<li><a href="equipment">Equipment</a></li>
-							<li><a href="db/">My&nbsp;Account</a></li>
-						</ul>
-					</div>
-					<div class="col-6 col-md">
-						<h6>Support</h6>
-						<ul class="list-unstyled text-small">
-							<li><a href="contact.html">Contact Us</a></li>
-							<li><a href="legal/privacy/">Privacy&nbsp;Policy</a></li>
-							<li><a href="sitemap.html">Site Map</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<div id="footer"></div>
 		<script>
 		function setYear() {
 			document.getElementById("year").innerHTML = (new Date()).getFullYear();
