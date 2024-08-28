@@ -1,0 +1,13 @@
+// required to get $orange variable
+@import "functions"; 
+@import "variables";
+
+$warning: #FFF204; // set the $primary variable
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+  "warning": $warning
+));
+
+// set changes
+@import "bootstrap";
