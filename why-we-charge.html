@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Lens and Lights | Why We Charge</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+		  	ga('create', 'UA-66611753-1', 'auto');
+		  	ga('send', 'pageview');
+		</script>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous">
+		</script>
+		<script> 
+			$(function(){
+			$("#header").load("/assets/html/header.html"); 
+			$("#footer").load("/assets/html/footer.html"); 
+			});
+		</script> 
+		<style>
+			div.alert-dark {
+				background-color: #333;
+				color:white;
+				margin-top: 1em;
+			}
+			.collapse-btn:after
+			{
+				content:'- Read Less' ;
+				display:block;
+				width:15px;
+			}
+			.collapsed.collapse-btn:after
+			{
+				content:'+ Read More' ;
+				display:block;
+				width:15px;
+			}
+			div.collapse,div.collapsing {
+				background-color: #343a40;
+				color:white;
+				margin: 1em 0em 0.5em;
+				border-color: black;
+			}
+			.collapse>p:last-child
+			{
+				margin-bottom:0;
+			}
+			.collapse-btn.btn {
+				width: 7.5rem;
+				margin-top: -0.25em;
+			}
+			div.collapse + p, div.collapsing + p {
+				margin-top: 0.5rem;
+			}
+			li {
+				margin-bottom: 0.2rem;
+			}
+			a:not(.btn):not(.text-light) {
+				color:lightblue;
+				text-decoration: underline;
+			}
+			.table tr>td,.table tr>th {
+				vertical-align:middle;
+			}
+			.table tr>td {
+				padding: 0.6rem 0.4rem;
+			}
+			.table .table-money {
+				font-size:1.5rem;
+				line-height: 1.5;
+			}
+			.table .table-money>span {
+				font-size:0.8rem;
+				line-height:1;
+			}
+			.table thead {
+				position: sticky;
+				top: 0;
+				text-align: center;
+			}
+			@media print {
+				* {
+					color: black !important;;
+				}
+				.collapse {
+					display: block !important;
+					height: auto !important;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="alert" class="alert-inline"></div>
+	
+		<section class="text-white bg-dark" style="box-shadow: 0 -2px 5px #333;">
+			<div class="container py-5">
+				<h1 id="top">Why We Charge for Events</h1>
+				<p>
+					Last Updated: Feb 13, 2025
+				</p>
+				<br>
+				<p class="alert alert-secondary" role="alert">
+                    LNL charges for our services so that we are able to repair, maintain, and replace the equipment we use to provide services to campus events. Financially, LNL operates differently than most student organizations at WPI. We do not receive an annual budget from SGA or from WPI for maintaining our event equipment. LNL is entirely a volunteer organization; we do not charge for labor or our members' time.   
+                </p>
+                <br>
+                <div class="alert alert-dark">
+					<h3 class="alert-heading">How do we spend funds?</h3>
+					<p>
+						LNL spends funds to maintain and repair equipment used for current services, replace equipment as it reaches end-of-life, and make incremental equipment upgrades to meet new needs of campus events.  
+					</p>
+					<hr>
+					<p>
+						Learn more about our purchasing philosophy.
+					</p>
+
+					<a class="collapse-btn btn btn-secondary collapsed" data-toggle="collapse" href="#purchasing-1"></a>
+					<div class="collapse alert alert-dark" id="purchasing-1">
+							<p>
+								LNL approaches purchasing new equipment holistically. To reduce the need for early replacement, we keep a close eye on our inventory and repair as needed. We begin to line up replacement options as equipment approaches end-of-life, typically at least 2 years before it is needed. We often opt to purchase lightly used equipment from reputable nearby companies to reduce purchase costs. We also pay close attention to the ever-changing needs of campus events and attempt to purchase equipment that meets current and anticipated needs. 
+							</p>
+							<p>
+								The world of event production equipment can move very fast and can be extremely expensive. LNL aims to purchase equipment that provides high quality experiences, is inexpensive to repair, and operates reliably for many years. We try to avoid “flashy” products or brand-new models since these often are difficult and expensive to maintain in the long-term. We often use equipment for 20+ years, so we consider each large purchase a significant investment in our ability to provide services long into the future. 
+							</p>
+						</div>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading">Why doesn’t funding come from the Undergraduate Student Life Fee or SGA?</h3>
+						<p>
+							LNL provides services for a variety of organizations. In a typical year, approximately three quarters (¾) of our event bookings are for student organizations. The remaining quarter (¼) of events are hosted by university departments, offices, and initiatives, as well as occasionally off-campus groups connected with WPI.  
+						</p><p>
+							If LNL were to be funded completely by the undergraduate student life fee, university offices and academic departments would essentially be getting our services for free. Charging for our services allows us to equitably fund our operations from both university operating funds and student organization funds. 
+						</p>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading">Why are our services so expensive?</h3>
+						<p>
+							In brief, event production equipment is expensive to purchase and maintain. At the same time, we work hard to keep our prices as low as possible. We’ve created excellent relationships with vendors who offer us low prices for replacement parts, repair services, and purchasing new equipment. Our members donate their time, collectively thousands of hours per semester, to support events, learn new skills, and repair our equipment. 
+						</p><p>
+							Our prices were designed to provide funding to maintain the services we currently provide. To keep our prices low, LNL does not charge enough to completely fund large equipment upgrades that significantly change our capabilities.  When we are looking to expand our capabilities, we request additional funding from SGA and/or university administration. <a href="#sga-fr">Read more here</a>. 
+						</p><p>
+							Because of these supplier relationships and since we don’t need to pay for labor, equipment transportation, or a storage warehouse, we are able to price our services significantly lower than any other event production provider. 
+						</p><p>
+							<strong>On average, LNL services are priced at less than 25% of external providers’ services. </strong>
+						</p>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading" id="sga-fr">Why does LNL ask SGA for additional funding (i.e. submit SGA Funding Requests)?</h3>
+						<p>
+							LNL spends funds to maintain and repair equipment used for current services, replace equipment as it reaches end-of-life, and make incremental equipment upgrades to meet new needs of campus events. Our prices were designed to maintain the equipment needed for our current services. To keep our prices low, LNL does not charge enough to completely fund large equipment upgrades that significantly change our capabilities.  
+						</p><p>
+							When campus events make requests beyond LNL capabilities, we often coordinate external equipment rentals. When we notice that many events are requesting the same rental equipment, we then look into purchasing similar items to avoid recurring rental costs. SGA has previously been open to LNL requesting SGA funds (FRs) to expand our capabilities. Historically, LNL has contributed by partially funding the request and asked SGA to assist with the remainder. 
+						</p>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading">What discounts does LNL provide and why? </h3>
+						<dl class="row">
+							<dt class="col-sm-3">Student Organization Event Discount:</dt> <dd class="col-sm-9">Any events funded by a WPI-recognized student organization receive this discount. We greatly appreciate the support of SGA to fund some parts of LNL equipment purchases, so we provide a discount for all student organizations. </dd>
+							
+							<dt class="col-sm-3">Combo Event Discount:</dt> <dd class="col-sm-9">We enjoy providing both sound and lighting services at events, so we apply this discount to any events with BOTH sound and lighting services. </dd>
+						</dl>
+						<p>
+							Occasionally, LNL may offer additional discounts, especially after a change in prices. Please <a href="mailto:lnl@wpi.edu">email LNL at lnl@wpi.edu</a> with any questions. 
+						</p>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading">What fees does LNL charge and why?</h3>
+						<dl class="row">
+							<dt class="col-sm-2">Outdoor Event Fee:</dt> 
+							<dd class="col-sm-10">
+								Events hosted in outdoor locations receive this fee. We charge this fee because outdoor events often expose our equipment to heat, weather, dirt and rain. This puts more wear and tear on our equipment and the fee covers the additional maintenance costs.  
+							</dd>
+							<dt class="col-sm-2">Off-Campus Event Fee:</dt> 
+							<dd class="col-sm-10">
+								Events hosted outside of 100 Institute Road receive this fee. We charge this fee because to support these events, our equipment needs to be transported, often via truck. This puts our equipment at increased risk of damage and the fee covers the additional maintenance costs. 
+							</dd>
+							<dt class="col-sm-2">Rental Fee:</dt> 
+							<dd class="col-sm-10">
+								Whenever LNL rents equipment from an external vendor to support an event, LNL charges a small fee to cover the costs to maintain the supporting equipment and cabling used with rental equipment. For example, we have previously rented lighting and video equipment which needs lots of additional power distribution, and LNL has invested in additional power distribution equipment to be used with rental equipment.
+							</dd>
+							<dt class="col-sm-2">Late-booked Event Fee:</dt> 
+							<dd class="col-sm-10">
+								We ask that organizations book an event more than 2 weeks in advance to avoid late fees. To be transparent, it can be difficult for LNL to plan for events and coordinate crew with short notice, and we charge a late fee to encourage organizations to reach out early and avoid additional stress on our crew and equipment.
+							</dd>
+						</dl>
+						<p>
+							Occasionally, LNL may charge additional fees for unusual events or requests. Please <a href="mailto:lnl@wpi.edu">email LNL at lnl@wpi.edu</a> with any questions. 
+						</p>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading">What about Film and Digital Projection in Fuller Upper?</h3>
+						<p>
+							Since 1989, LNL has provided film projection services in Fuller Perrault Hall (and before then, we provided projection services in Alden Hall and Salisbury 115). Nowadays, we provide digital, 16mm, 35mm, and 70mm film projection services for weekend movies, special events, and film screenings. 
+						</p><p>
+							Financially, projection services in the Fuller Upper Booth operate separately from the rest of the club. LNL has received funding directly from the student life fee to maintain our projectors and supporting equipment. Projection funding is separated into a different WPI Workday fund (worktag) and is not used to support LNL event services.  
+						</p><p>
+							LNL offers digital and film projection services in Fuller Upper Perrault Hall, provided that the required public showing license (movie rights) is purchased. On average, rights to show most movies are $1,000 to $1,500, and LNL can help coordinate purchasing rights or connect organizations with companies providing rights. Anytime LNL helps an organization obtain rights to show a movie, LNL passes along the expense and does not profit from the coordination of rights. 
+						</p><p>
+							<a href="https://lnl.wpi.edu/services/projection.html">Read more here</a> about LNL’s beginnings in film projection and our unique modern projection capabilities. 
+						</p>
+					</div>
+					<div class="alert alert-dark">
+						<h3 class="alert-heading" id="projection">Questions, Comments, or Concerns?</h3>
+						<p>
+							Please reach out to us via email at <a href="https://outlook.office.com/mail/deeplink/compose?to=lnl@wpi.edu">lnl@wpi.edu</a>. We’re happy to chat about options for your next event and discuss any feedback.   
+						</p>
+					</div>
+					
+
+				</div>
+			</div>
+		</section>
+		<!--Modal Views-->
+		<div class="modal" tabindex="-1" role="dialog" id="critical-alert">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header" id="alert-header">
+						<h5 class="modal-title" id="alert-title"></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" id="alert-message">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<form id="page-id">
+			<input hidden name="project_id" value="LNL">
+			<input id="dirID" hidden name="directory" value="">
+			<input id="pageID" hidden name="page_id" value="">
+		</form>
+		<div id="footer" class="d-print-none"></div>
+		<script>
+		function setYear() {
+			document.getElementById("year").innerHTML = (new Date()).getFullYear();
+			getNotifications();
+		}
+		
+		function toggleMenu(){
+        	if (document.getElementById("nav").style.display == "block"){
+        		document.getElementById("nav").style.display = "none";
+        	}else{
+        		document.getElementById("nav").style.display = "block";
+        	}
+        }
+
+		window.onload = setYear;
+		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    	<script src="assets/js/api.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
