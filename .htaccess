@@ -6,19 +6,13 @@ SetHandler default-handler
 AddHandler cgi-script .py
 RewriteEngine On
 
-RewriteBase /
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
 
-RewriteCond %{HTTP_HOST} ^users.wpi.edu$
-RewriteRule ^(.*)$ http://lnl.wpi.edu/$1 [L,R=301]
-
-RewriteRule ^(~lnl/.*)$ http://lnl.wpi.edu/$1 [L,R=301]
-RewriteRule ^(/~lnl/.*)$ http://lnl.wpi.edu/$1 [L,R=301]
-
-RewriteRule ^(media/.*)$ - [L]
-RewriteRule ^(static/.*)$ - [L]
-
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://lnl.wpi.edu/$1 [L,R]
+# Clean URLs (example.com/about instead of about.html)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
@@ -36,3 +30,8 @@ ExpiresByType image/x-icon "access 1 day"
 # Wait until we confirm everything is working before we try anything.
 PassengerEnabled On
 # PassengerAppRoot /home/lnl/lnldb
+
+# Block Access to .htaccess and config files
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
