@@ -2,3 +2,4 @@
 /media/
 /workorder/
 .vscode*
+*.DS_Store
