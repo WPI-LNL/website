@@ -28,6 +28,7 @@ pages = {
     "/about.html" : "about.html",
     "/contact.html" : "contact.html",
     "/equipment.html" : "equipment.html",
+    "/history.html" : "history.html",
     "/services/lighting.html" : "lighting.html",
 }
 
