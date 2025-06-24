@@ -30,6 +30,7 @@ pages = {
 	"/equipment.html" : "equipment.html",
 	"/history.html" : "history.html",
 	"/maintenance.html" : "maintenance.html",
+	"/sitemap.html" : "sitemap.html",
 	"/services/lighting.html" : "lighting.html",
 }
 
