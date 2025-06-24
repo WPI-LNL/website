@@ -15,37 +15,38 @@ from pathlib import Path
 template_dir = Path(__file__).parent
 
 settings.configure(
-    TEMPLATES = [{
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [template_dir],
-    }]
+	TEMPLATES = [{
+		'BACKEND': 'django.template.backends.django.DjangoTemplates',
+		'DIRS': [template_dir],
+	}]
 )
 django.setup()
 
 pages = {
-    # url : template_filename
-    "/index.html" : "index.html",
-    "/about.html" : "about.html",
-    "/contact.html" : "contact.html",
-    "/equipment.html" : "equipment.html",
-    "/history.html" : "history.html",
-    "/services/lighting.html" : "lighting.html",
+	# url : template_filename
+	"/index.html" : "index.html",
+	"/about.html" : "about.html",
+	"/contact.html" : "contact.html",
+	"/equipment.html" : "equipment.html",
+	"/history.html" : "history.html",
+	"/maintenance.html" : "maintenance.html",
+	"/services/lighting.html" : "lighting.html",
 }
 
 
 for url, template_filename in pages.items():
-    template = None
+	template = None
 
-    try:
-        with open(template_dir / template_filename) as template_file:
-            template = Template(template_file.read())
-    except FileNotFoundError:
-        print(f'Could not find the template: {template_filename}. Skipping this page.')
-        continue
+	try:
+		with open(template_dir / template_filename) as template_file:
+			template = Template(template_file.read())
+	except FileNotFoundError:
+		print(f'Could not find the template: {template_filename}. Skipping this page.')
+		continue
 
-    html = template.render(Context())
-    
-    with open(Path('.' + url), 'w') as dest_file:
-        dest_file.write(html)
-    
-    print(f'Successfully rendered {url}')
+	html = template.render(Context())
+	
+	with open(Path('.' + url), 'w') as dest_file:
+		dest_file.write(html)
+	
+	print(f'Successfully rendered {url}')

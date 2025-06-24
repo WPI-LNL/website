@@ -5,49 +5,49 @@
 
 {% block content %}
 <div class="container mt-4 pb-4 text-white">
-    <div class="jumbotron" style="color: black; background-color: #eee">
-        <h2>Contact Us</h2>
-        <p>The primary way to contact us is through our email address, <a href='mailto:lnl@wpi.edu' class="text-primary">lnl@wpi.edu</a></p>
-        <p><strong>Phone:</strong> <a href="tel:508-831-5595" class="text-primary">508-831-5595</a></p>
-        <!--<p>Fax: 508-831-6045</p>-->
-        <address>
-            <p><strong>Mailing address:</strong><br><span style="color: black">
-            WPI Lens and Lights<br>
-            100 Institute Road<br>
-            Worcester, MA 01609</span></p>
-        </address>
-    </div>
-    <div class="jumbotron" style="background-color: #212529">
-        <h3>Meetings</h3>
-        <br>
-        <p><span style="color: yellow; font-weight: bold">General Meetings:</span> 5:00 PM Wednesdays in Room 233 of Atwater Kent<br>
-        <span style="color: yellow; font-weight: bold">Executive Board Meetings:</span> 5:00 PM Mondays in the Campus Center Morgan Room</p>
-    </div>
-    <h3>Office</h3>
-    <p>You can also come visit our office on the third floor of the Campus Center (Room 339). Office hours are posted below.</p>
-    <div class="table-responsive bg-light">
-        <table class="table table-light" style="color: black">
-            <thead class="table-dark">
-                <tr>
-                    <td>Officer</td>
-                    <td>Position</td>
-                    <td>Location</td>
-                    <td>Hours</td>
-                    <td>Contact</td>
-                </tr>
-            </thead>
-            <tbody id="hours">
-            </tbody>
-        </table>
-    </div>
-    <br>
-    <h3 id="update-header"></h3>
-    <br>
-    <div id="updates"></div>
+	<div class="jumbotron" style="color: black; background-color: #eee">
+		<h2>Contact Us</h2>
+		<p>The primary way to contact us is through our email address, <a href='mailto:lnl@wpi.edu' class="text-primary">lnl@wpi.edu</a></p>
+		<p><strong>Phone:</strong> <a href="tel:508-831-5595" class="text-primary">508-831-5595</a></p>
+		<!--<p>Fax: 508-831-6045</p>-->
+		<address>
+			<p><strong>Mailing address:</strong><br><span style="color: black">
+			WPI Lens and Lights<br>
+			100 Institute Road<br>
+			Worcester, MA 01609</span></p>
+		</address>
+	</div>
+	<div class="jumbotron" style="background-color: #212529">
+		<h3>Meetings</h3>
+		<br>
+		<p><span style="color: yellow; font-weight: bold">General Meetings:</span> 5:00 PM Wednesdays in Room 233 of Atwater Kent<br>
+		<span style="color: yellow; font-weight: bold">Executive Board Meetings:</span> 5:00 PM Mondays in the Campus Center Morgan Room</p>
+	</div>
+	<h3>Office</h3>
+	<p>You can also come visit our office on the third floor of the Campus Center (Room 339). Office hours are posted below.</p>
+	<div class="table-responsive bg-light">
+		<table class="table table-light" style="color: black">
+			<thead class="table-dark">
+				<tr>
+					<td>Officer</td>
+					<td>Position</td>
+					<td>Location</td>
+					<td>Hours</td>
+					<td>Contact</td>
+				</tr>
+			</thead>
+			<tbody id="hours">
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<h3 id="update-header"></h3>
+	<br>
+	<div id="updates"></div>
 </div>
 {% endblock %}
 
 {% block onload %}
-    {{ block.super }}
+	{{ block.super }}
 	getOfficers(false);
 {% endblock %}
