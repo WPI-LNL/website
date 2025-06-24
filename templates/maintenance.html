@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Lens and Lights | Maintenance{% endblock %}
+{% block description %}{% endblock %}
+
+{% block style %}
+#wrapper {
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#maintenance-message {
+	text-align: center;
+}
+
+#iconWrapper {
+	flex: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+#big-icon {
+	animation: fa-spin 10s infinite linear;
+}
+
+#small-icon {
+	animation: fa-spin 6s infinite linear reverse;
+}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 pb-4 text-white">
+	<div id="wrapper">
+		<div>
+			<h2 class="h5 text-center">Maintenance In Progress</h2>
+			<p><br></p>
+			<div id="iconWrapper">
+				<span id="big-icon" class="fa fa-cog fa-4x"></span>
+				<span id="small-icon" class="fa fa-cog fa-2x"></span>
+			</div>
+			<div id="maintenance-message">
+				<br>
+				<p>We apologize for the inconvenience.<br>We hope to be back up and rolling again soon!</p>
+				<p>Need assistance? Contact us at <a href="mailto:lnl-w@wpi.edu" class="text-warning">lnl-w@wpi.edu</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
