@@ -31,6 +31,7 @@ pages = {
 	"/history.html" : "history.html",
 	"/maintenance.html" : "maintenance.html",
 	"/sitemap.html" : "sitemap.html",
+	"/legal/opt-out.html" : "opt-out.html",
 	"/services/lighting.html" : "lighting.html",
 }
 
