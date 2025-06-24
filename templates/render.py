@@ -44,3 +44,5 @@ for url, template_filename in pages.items():
     
     with open(Path('.' + url), 'w') as dest_file:
         dest_file.write(html)
+    
+    print(f'Successfully rendered {url}')

@@ -141,6 +141,7 @@
 		<script>
             function setYear() {
                 {% block onload %}
+                    document.getElementById("year").innerHTML = (new Date()).getFullYear();
                     getNotifications();
                 {% endblock %}
             }
