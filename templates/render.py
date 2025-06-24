@@ -27,6 +27,7 @@ pages = {
     "/index.html" : "index.html",
     "/about.html" : "about.html",
     "/contact.html" : "contact.html",
+    "/equipment.html" : "equipment.html",
     "/services/lighting.html" : "lighting.html",
 }
 
