@@ -3,8 +3,8 @@
 	<head>
     	<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta name="description" content="Lens and Lights provides professional quality production services to the WPI community at an affordable price. Learn more about our club and meet our current executive board members here.">
-		<title>Lens and Lights | About Us</title>
+		<meta name="description" content="We've been providing professional quality lighting, sound, and projection services to the WPI community since 1962. Book us for your next event and we'll help you make it amazing!">
+        <title>WPI &middot; Lens and Lights</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/main.css">
@@ -17,9 +17,13 @@
 		  	ga('create', 'UA-66611753-1', 'auto');
 		  	ga('send', 'pageview');
 		</script>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 		
 		<!-- Fav and touch icons -->
-		<link rel="shortcut icon" href="assets/ico/favicon.ico">
+		<link rel="shortcut icon" href="/assets/ico/favicon.ico">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -50,6 +54,7 @@
                 <div id="alert" class="alert-inline"></div>
             </header>
         </div>
+
 		<section class="bg-dark">
 			<br>
 			<div class="container" id="alert"></div>
@@ -200,6 +205,7 @@ function moveTouch(e){
 
 
 		</section>
+
 		<!--Modal Views-->
 		<div class="modal" tabindex="-1" role="dialog" id="critical-alert">
 			<div class="modal-dialog" role="document">
@@ -219,11 +225,13 @@ function moveTouch(e){
 				</div>
 			</div>
 		</div>
+
 		<form id="page-id">
 			<input hidden name="project_id" value="LNL">
 			<input id="dirID" hidden name="directory" value="">
 			<input id="pageID" hidden name="page_id" value="">
 		</form>
+
 		<div id="footer">
             <footer role="contentinfo" class="pt-5 pb-4 bg-dark m-0">
                 <div class="container px-5">
@@ -273,21 +281,24 @@ function moveTouch(e){
                 </div>
             </footer>
         </div>
-		<script>
-		function setYear() {
-			getNotifications();
-			getOfficers(true);
-		}
-		
-		function toggleMenu(){
-        	if (document.getElementById("nav").style.display == "block"){
-        		document.getElementById("nav").style.display = "none";
-        	} else{
-        		document.getElementById("nav").style.display = "block";
-        	}
-        }
 
-		window.onload = setYear;
+		<script>
+            function setYear() {
+                
+    document.getElementById("year").innerHTML = (new Date()).getFullYear();
+    getNotifications();
+
+            }
+            
+            function toggleMenu(){
+                if (document.getElementById("nav").style.display == "block"){
+                    document.getElementById("nav").style.display = "none";
+                } else {
+                    document.getElementById("nav").style.display = "block";
+                }
+            }
+
+            window.onload = setYear;
 		</script>
     	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     	<script src="assets/js/api.js"></script>

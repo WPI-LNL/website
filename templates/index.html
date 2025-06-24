@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %}WPI &middot; Lens and Lights{% endblock %}
+
+{% block description %}We've been providing professional quality lighting, sound, and projection services to the WPI community since 1962. Book us for your next event and we'll help you make it amazing!{% endblock %}
+
 {% block content %}
 <section>
     <div id="slides" class="carousel slide" data-ride="carousel" style="margin-bottom: 4rem;">
@@ -145,4 +149,9 @@ function moveTouch(e){
 }
 </script>
 
+{% endblock %}
+
+{% block onload %}
+    document.getElementById("year").innerHTML = (new Date()).getFullYear();
+    getNotifications();
 {% endblock %}
