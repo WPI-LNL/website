@@ -26,6 +26,7 @@ pages = {
     # url : template_filename
     "/index.html" : "index.html",
     "/about.html" : "about.html",
+    "/contact.html" : "contact.html",
     "/services/lighting.html" : "lighting.html",
 }
 
