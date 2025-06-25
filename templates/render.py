@@ -32,6 +32,7 @@ pages = {
 	"/maintenance.html" : "maintenance.html",
 	"/sitemap.html" : "sitemap.html",
 	"/legal/opt-out.html" : "opt-out.html",
+	"/legal/privacy.html" : "privacy.html",
 	"/services/lighting.html" : "lighting.html",
 }
 
