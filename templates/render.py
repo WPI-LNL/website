@@ -40,6 +40,7 @@ pages = {
 	"/services/lighting.html" : "lighting.html",
 	"/services/projection.html" : "projection.html",
 	"/services/sound.html" : "sound.html",
+	"/caring.html" : "caring.html",
 }
 
 
