@@ -3,3 +3,5 @@
 /workorder/
 .vscode*
 *.DS_Store
+**/*.html
+!/templates/*.html
