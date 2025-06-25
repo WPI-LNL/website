@@ -130,9 +130,9 @@ small {
 }
 
 .card-img-top {
-	max-height: 250px;
+	max-height: 400px;
 	object-fit: cover;
-	object-position: top;
+	object-position: 50% 20%;
 }
 
 .card-dark {
