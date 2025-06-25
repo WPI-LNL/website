@@ -33,6 +33,7 @@ pages = {
 	"/sitemap.html" : "sitemap.html",
 	"/legal/opt-out.html" : "opt-out.html",
 	"/legal/privacy.html" : "privacy.html",
+	"/legal/rentals.html" : "rentals.html",
 	"/services/lighting.html" : "lighting.html",
 }
 
