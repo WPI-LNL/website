@@ -34,6 +34,9 @@ pages = {
 	"/legal/opt-out.html" : "opt-out.html",
 	"/legal/privacy.html" : "privacy.html",
 	"/legal/rentals.html" : "rentals.html",
+	"/pricing/2025-updates.html" : "2025-pricing-updates.html",
+	"/pricing/index.html" : "pricing-index.html",
+	"/pricing/why-we-charge.html" : "why-we-charge.html",
 	"/services/lighting.html" : "lighting.html",
 }
 
