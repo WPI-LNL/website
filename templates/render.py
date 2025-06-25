@@ -38,6 +38,8 @@ pages = {
 	"/pricing/index.html" : "pricing-index.html",
 	"/pricing/why-we-charge.html" : "why-we-charge.html",
 	"/services/lighting.html" : "lighting.html",
+	"/services/projection.html" : "projection.html",
+	"/services/sound.html" : "sound.html",
 }
 
 

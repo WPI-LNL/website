@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Lens and Lights | Lighting{% endblock %}
+{% block description %}We love lighting at Lens and Lights - it's in our name!{% endblock %}
+
+{# TODO: the extra <br> above the alert div looks weird on this page #}
+{% block content %}
+<section class="pb-1 light">
+	<div id="slides" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item full active" style="background-image: url('/assets/img/lighting/intl-dinner.jpg');">
+				<div class="carousel-caption">
+					<p><span class="head">International Dinner </span>
+					had stage and table lighting in Alden Hall</p>
+				</div>
+			</div>
+			<div class="carousel-item full" style="background-image: url('/assets/img/lighting/pan-asian.jpg');">
+				<div class="carousel-caption">
+					<p><span class="head">Pan-Asian Semi-Formal</span>
+					used a variety of intelligent and conventional fixtures</p>
+				</div>
+			</div>
+			<div class="carousel-item full" style="background-image: url('/assets/img/lighting/boardoftrustees.jpg');">
+				<div class="carousel-caption">
+					<p><span class="head">Board of Trustees</span>
+					utilized uplighting in the Odeum</p>
+				</div>
+			</div>
+			<div class="carousel-item full" style="background-image: url('/assets/img/lighting/vex.jpg');">
+				<div class="carousel-caption">
+					<p><span class="head">VEX Robotics - The WAVE @ WPI</span>
+					featured dynamic area lighting on the competition fields</p>
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control-next" href="#slides" role="button" data-slide="next">&rsaquo;</a>
+	</div>
+</section>
+<section class="text-white bg-dark up-shadow">
+	<div class="container py-5">
+		<h1 style="color: yellow">Lighting</h1>
+		<br>
+		<p>Since the early 1970s, we’ve been providing lighting services to our clients
+		all around the WPI community. Whether you need a simple spotlight on a podium, a full-scale show with complicated 
+		effects, or anything in between, we’ve got you covered. With a wide variety of professional lighting fixtures and equipment, 
+		and our experienced and dedicated team, you can rest assured that your event is in good hands.</p>
+		<p>Thanks to our long history operating at WPI we know the intricacies of every event space on campus and can use that knowledge
+		to make your event as bright as it can be. Our equipment inventory is large and varied with products from the best in the industry. 
+		From basic lighting fixtures using conventional halogen lamps, to moving head fixtures from renowned brands like High End Systems 
+		and VariLite, or consoles from Avolites and Electronic Theatre Controls, we have the equipment that can make your event truly shine. 
+		For those larger events, we have the experience and capability to rent more fixtures to really “wow” your attendees.</p>
+		<p>In addition to specific lighting equipment, we also own a substantial amount of rigging hardware for hanging lights virtually 
+		anywhere on campus. Box truss, chain hoists, and mobile lifts allow us to have versatility in creating the best lighting setup possible. 
+		We can do nearly anything - basic spot lights, stage washes, area lighting, uplighting, and more - all tailored to what your event 
+		needs. Please don’t hesitate to get in touch with us. We’re happy to work with you to create the perfect event!</p>
+	</div>
+</section>
+<section style="background-color: #262626">
+	<div class="container pt-4" style="color: white">
+		<h3 class="h4 mt-2" style="color: yellow">Equipment</h3>
+		<p class="mb-0 pb-2">Want to learn more about the equipment we use? Check out our Technical Overview for an in-depth look at our inventory.
+		<br><br><button class="btn btn-warning" onclick="window.location.href='/equipment'">Learn More</button><br><br></p>
+	</div>
+</section>
+{% endblock %}
