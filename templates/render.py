@@ -56,6 +56,8 @@ for url, template_filename in pages.items():
 
 	html = template.render(Context())
 	
+	dest_path = Path('.' + url)
+	dest_path.parent.mkdir(parents=True, exist_ok=True)
 	with open(Path('.' + url), 'w') as dest_file:
 		dest_file.write(html)
 	
