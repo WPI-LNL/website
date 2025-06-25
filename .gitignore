@@ -3,5 +3,6 @@
 /workorder/
 .vscode*
 *.DS_Store
+Thumbs.db
 **/*.html
 !/templates/*.html
