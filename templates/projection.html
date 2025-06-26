@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}Lens and Lights | Projection{% endblock %}
+{% block description %}At LNL, we reel-y love a good movie! Our projectionists can operate films in 16 mm, 35 mm, 70 mm, and digital formats.{% endblock %}
+
+{% block content %}
+<section class="pb-1 light">
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item full active" style="background-image: url('/assets/img/projection/1.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">The Projection Booth</span>
+                    in Upper FLAUD to our digital, Norelco and 16mm projectors</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/2.png');">
+                <div class="carousel-caption">
+                    <p><span class="head">70mm Lens</span>
+                    mounted in one of our Norelco DP70s</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/3.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Shorts and Trailers</span>
+                    Old reels of 35mm film</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/4.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Reels and Reels </span>
+                    Lots of 16mm film stored on shelves</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/CP650.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Audio processing</span>
+                    for the house system in Upper FLAUD</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/6.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">DP70</span>
+                    inner workings</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/p7.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Projecting</span>
+                    The Hateful Eight in 70mm</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/projection/9.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Film Bench </span>
+                    One of our projectionists inspects and splices together a new reel</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control-next" href="#slides" role="button" data-slide="next">&rsaquo;</a>
+    </div>
+</section>
+<section class="text-white bg-dark up-shadow">
+    <div class="container py-5">
+        <h1 style="color: yellow">Projection</h1>
+        <br>
+        <p>Lens and Lights started off in the winter of 1961-62 after a few WPI students took over two 35mm film
+            projectors that were left by the Navy ROTC program. Decades later, Lens and Lights still shows
+            movies every week in Upper Perreault Hall, bringing theater quality movie presentations in 16mm,
+            35mm, 70mm, and 2K digital with 5.1 surround sound. LNL shows a wide variety of films ranging from classic
+            80s Sci-Fi to movies fresh out of theaters - sometimes even before Blu-Ray release! Together with
+            student organizations (SocComm Films) and in partnership with individuals and professors (HUA Film
+            series, China Hub Series) we present what the community wants to see on the big screen. In summary,
+            LNL is a group of students who love the art of projection - both in classical (film) and modern
+            (2K digital) formats.</p>
+        <p>Currently, we are one of the few remaining theaters that can present in both 35mm and 70mm film and
+            we keep our projectionists fully trained on its proper handling and use. When we do occasionally
+            present classic movies on 35mm or modern 70mm, we can do something no other theater in Worcester can
+            do. By request, our film distributor, as well as our contacts at the Library of Congress and the
+            Criterion Collection, can provide us with access to thousands of movies on film.</p>
+        <p>Please don’t hesitate to get in touch with us. We’re happy to work with you to create the perfect
+            movie presentation! We are also always on the lookout for new members, so reach out if you want to
+            learn more. Or come up to the booth behind Upper Perreault Hall after a movie or whenever
+            you see the lights on!</p>
+    </div>
+</section>
+<section style="background-color: #262626">
+    <div class="container pt-4" style="color: white">
+        <h3 class="h4 mt-2" style="color: yellow">Equipment</h3>
+        <p class="mb-0 pb-2">Want to learn more about our projectors? Check out our Technical Overview for an in-depth look at our inventory.
+        <br><br><button class="btn btn-warning" onclick="window.location.href='/equipment'">Learn More</button><br><br></p>
+    </div>
+</section>
+{% endblock %}

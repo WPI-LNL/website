@@ -1,0 +1,108 @@
+{% extends 'base_noindex.html' %}
+
+{% block title %}Lens and Lights | Sitemap{% endblock %}
+{% block description %}WPI Lens and Lights - The path to your next great event{% endblock %}
+
+{% block content %}
+<div class="container" style="color: white">
+	<h2 class="h2">LNL Site Map</h2>
+	<hr>
+	<div class="container row m-auto">
+		<div class="col-md-3">
+			<h3 class="h4">About</h3>
+			<ul class="list-unstyled" id="About">
+				<li><a href="about">Who We Are</a></li>
+				<li><a href="join/">Join Us</a></li>
+				<li><a href="history">History</a></li>
+				<li><a href="equipment">Equipment</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<h3 class="h4">Services</h3>
+			<ul class="list-unstyled" id="Services">
+				<li><a href="services/lighting">Lighting</a></li>
+				<li><a href="services/sound">Sound</a></li>
+				<li><a href="services/projection">Projection</a></li>
+				<li><a href="pricing/">Pricing</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<h3 class="h4">Support</h3>
+			<ul class="list-unstyled" id="Support">
+				<li><a href="contact">Contact Us</a></li>
+				<li><a href="legal/privacy/">Privacy Policy</a></li>
+				<li><a href="legal/opt-out/">Email Communications (Opt-out)</a></li>
+			</ul>
+		</div>
+	</div>
+	<hr>
+	<div class="container row m-auto">
+		<div class="col-md-3 my-2">
+			<h3 class="h4">Account</h3>
+			<ul class="list-unstyled" id="Account">
+				<li><a href="db/">Login</a></li>
+				<li><a href="me/">Update Your Profile</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 my-2">
+			<h3 class="h4">API</h3>
+			<ul class="list-unstyled" id="API">
+				<li><a href="api/docs/">Documentation</a></li>
+				<li><a href="mailto:lnl-w@wpi.edu">Register an application</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 my-2">
+			<h3 class="h4">Events</h3>
+			<ul class="list-unstyled" id="Events">
+				<li><a href="list/">Upcoming Events</a></li>
+				<li><a href="workshops/">Workshops</a></li>
+				<li><a href="crew/">Crew Checkin / Checkout</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 my-2">
+			<h3 class="h4">Help</h3>
+			<ul class="list-unstyled" id="Help">
+				<li><a href="https://lnldb.readthedocs.io/en/latest">User Guides</a></li>
+				<li><a href="https://lnldb.readthedocs.io/en/latest/release-notes/">What's New</a></li>
+				<li><a href="https://lnldb.readthedocs.io/en/latest/help/report-bugs">Report a Bug</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 my-2">
+			<h3 class="h4">Member Resources</h3>
+			<ul class="list-unstyled" id="Member Resources">
+				<li><a href="db/meetings/">Meetings</a></li>
+				<li><a href="db/laptops/">Laptops</a></li>
+				<li><a href="db/projection/training/request/">Request a PIT</a></li>
+				<li><a href="https://lnl-rt.wpi.edu">Snipe</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 my-2">
+			<h3 class="h4">Customer Resources</h3>
+			<ul class="list-unstyled" id="Customer Resources">
+				<li><a href="my/events/">View Your Events</a></li>
+				<li><a href="my/orgs/">View Your Organizations</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 my-2">
+			<h3 class="h4">Developer Resources</h3>
+			<ul class="list-unstyled" id="Developer Resources">
+				<li><a href="https://lnldb.readthedocs.io/en/latest/develop/">Development Guide</a></li>
+				<li><a href="https://github.com/WPI-LNL/lnldb/discussions">LNLDB Discussion</a></li>
+			</ul>
+		</div>
+	</div>
+	<hr>
+	<div class="container row m-auto" id="more-links">
+		<div class="col-md-3 my-2" id="additional-links" style="display: none">
+			<h3 class="h4">Additional Links</h3>
+			<ul class="list-unstyled" id="Redirects">
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block onload %}
+	{{ block.super }}
+	getRedirects();
+{% endblock %}

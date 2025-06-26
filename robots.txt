@@ -6,3 +6,5 @@ Disallow: /assets/js
 Disallow: /assets/css
 Disallow: /software
 Disallow: /caring
+Disallow: /maintenance
+Disallow: /sitemap

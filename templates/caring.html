@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="">
+		<title>Caring Status</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<style>
+			html {
+				position: relative;
+				min-height: 100%;
+			}
+
+			.loading-div {
+				margin: auto;
+				border: 10px solid #c3c3c3;
+				border-top: 10px solid #ac2a38;
+				border-radius: 50%;
+				width: 80px;
+				height: 80px;
+				animation: spin 0.75s linear infinite;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-md mb-4 justify-content-between" style="background-color: black; width: 100%">
+			<h1 style="color: #ffe204; padding-top: 5px" class="h3">Caring Status</h1>
+			<h2 style="color: #ffe204; padding-top: 5px" class="h6" id="short-name">WPI Voting Club</h2>
+		</nav>
+		<div style="padding-left: 2%; text-align: center;">
+			<div class="alert alert-warning alert-dismissible fade show col-md-8 mt-4" id="advisory"
+				style="margin: auto; margin-bottom: 20px;" role="alert">
+				<button class="close" data-dismiss="alert">×</button>
+				<strong>ATTENTION:</strong> <span id="advisory-message">A caring advisory is now in effect for your area.<br>Two
+					incidents have been reported this week.</span>
+			</div>
+
+			<br>
+			<div class="container" style="padding-bottom: 10%; display: block;" id="data">
+				<h3 class="h5">Caring Status</h3>
+				<p>The current caring level at <span id="short-name-2">Lens and Lights</span> is:</p>
+				<div class="text-center col-md-4" style="margin: auto; background-color: red; border-radius: 10px" id="color">
+					<p class="p-4" style="color: white; display: block;" id="level-white"><i
+							class="fas fa-exclamation-triangle"></i> Danger</p>
+				</div>
+				<br>
+				<p><strong>RECOMMENDATIONS:</strong><br><span id="recs"> <a href="http://stopcaring.net">stopcaring.net</a>
+					</span></p>
+				<br>
+				<br>
+				<div class="text-left">
+					<h3 class="h5">Leader Board</h3>
+					<p>Notice someone caring a little too much? <a
+							href="https://outlook.office.com/mail/deeplink/compose?to=gr-caringdirector@wpi.edu&subject=CARING%20REPORT&body=WHO%20WAS%20CARING:%0A%0ACLASS%20YEAR%20OF%20CARING%20INDIVIDUAL:%0A%0ADATE%20OF%20INCIDENT:%0A%0ADESCRIBE%20THE%20INCIDENT:"
+							target="_blank">Let us know!</a></p>
+					<p></p>
+					<ol>
+						<li><em>Benjamin Antupit (2025, Alden Building Manager)</em></li>
+						<li><em>Alex Tannenbaum (2027, Modified robots.txt for this page)</em></li>
+					</ol>
+					<p></p>
+				</div>
+			</div>
+			<div class="loading-div" id="loader" style="display: none;"></div>
+		</div>
+		<form id="parameters">
+			<input name="Operation" value="GET" hidden="">
+			<input name="ID" value="wpi" id="location" hidden="">
+		</form>
+		<footer class="footer pt-2"
+			style="text-align: center; margin-bottom: 0px; position: absolute; bottom: 0; width: 100%; background-color: #EEE"
+			role="contentinfo">
+			<p class=""><span class="small" style="color: #777; line-height: normal"><strong>Last updated:</strong> Less than 1
+					hour ago<br>Caring Status™ is a registered trademark of the WPI Voting Club</span></p>
+		</footer>
+	</body>
+</html>

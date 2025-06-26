@@ -1,0 +1,552 @@
+{% extends 'base.html' %}
+
+{% block title %}Lens and Lights | New Pricing Starting July 2025{% endblock %}
+{% block description %}{% endblock %}
+
+{% block style %}
+div.alert-dark {
+	background-color: #333;
+	color:white;
+	margin-top: 1em;
+}
+div.alert>p:last-child {
+	margin-bottom:0.25rem;
+}
+.collapse-btn:after
+{
+	content:'- Read Less' ;
+	display:block;
+	width:15px;
+}
+.collapsed.collapse-btn:after
+{
+	content:'+ Read More' ;
+	display:block;
+	width:15px;
+}
+div.collapse,div.collapsing,div.inner {
+	background-color: #343a40;
+	color:white;
+	margin: 1em 0em 0.5em;
+	border-color: black;
+}
+.collapse>p:last-child
+{
+	margin-bottom:0;
+}
+.collapse-btn.btn {
+	width: 7.5rem;
+	margin-top: -0.25em;
+}
+div.collapse + p, div.collapsing + p {
+	margin-top: 0.5rem;
+}
+li {
+	margin-bottom: 0.2rem;
+}
+a:not(.btn):not(.text-light) {
+	color:lightblue;
+	text-decoration: underline;
+}
+.table tr>td,.table tr>th {
+	vertical-align:middle;
+}
+.table tr>td {
+	padding: 0.6rem 0.4rem;
+}
+.table .table-money {
+	font-size:1.5rem;
+	line-height: 1;
+}
+.table .table-money>span {
+	font-size:0.8rem;
+}
+.table thead {
+	position: sticky;
+	top: 0;
+	text-align: center;
+}
+@media print {
+	* {
+		color: black !important;;
+	}
+	.collapse {
+		display: block !important;
+		height: auto !important;
+	}
+}
+{% endblock %}
+
+{% block content-section-attributes %}class="text-white bg-dark" style="box-shadow: 0 -2px 5px #333;"{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+	<div class="row">
+		<h1 id="top" class="col-md-10">New Pricing for LNL Services <br class="d-none d-md-block d-xl-none">Starting in
+			July 2025</h1>
+		<div class="col-sm-2 d-none d-md-block"><a href="#resources"
+				class="btn btn-outline-warning btn-lg float-right">FR Resources</a></div>
+	</div>
+	<br>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading">In Brief:</h3>
+		<p>
+			Starting in July 2025, LNL will be increasing prices in order to adjust for rising inflation, increasing
+			equipment upkeep costs, and to facilitate the replacement of outdated equipment. This will be our first
+			price increase in over 14 years.
+		</p>
+		<p>
+			For student organization that recieve an SGA budget, please take a look at <a href="#resources">pre-filled
+				FR resources here</a>.
+		</p>
+	</div>
+	<br>
+	<h3>Why change prices now?</h3>
+	<p>
+		When LNL last adjusted the pricing structure of our services in 2019, the cost of LNL services decreased on
+		average. Prices were last increased in 2011, and since then, our services and equipment have dramatically
+		changed. With our existing prices, LNL can no longer continue to afford the repair or replacement of our
+		increasingly aging equipment. Because of this, LNL has decided to increase prices starting in July 2025.
+	</p>
+	<p>
+		Over the last decade, our focus has been on repairing and extending the life of our equipment, often far past
+		the expected end-of-life. However, we are now faced with an aging inventory, and several pieces of expensive
+		equipment will need replacement in 2-4 years. Our existing pricing structure is long outdated, and we will be
+		unable to cover these expenses when equipment requires replacement. Our new pricing keeps our services as
+		affordable and accessible as possible while taking these anticipated costs into account.
+	</p>
+	<p>
+		To be frank, we don’t take this matter lightly and we understand that the price adjustment will be significant,
+		especially for organizers of large events. We have been working on these changes for over 2 years, pushing back
+		the announcement many times to allow for refinement and the integration of feedback from SAO and SGA.
+	</p>
+	<p>
+		We are here to support all event organizers on campus with the transition to our new pricing and we don’t want
+		the increased cost to become a barrier. For the upcoming academic year (2025-26), we’re open to offering
+		significant discounts to alleviate budgeting challenges. For events funded by student organizations, we’ve
+		discussed the price increase with SGA, and they are expecting an increased cost for LNL services in Funding
+		Requests and budgets.
+	</p>
+	<p>
+		Above all, we’re excited to continue supporting the events that bring our community together. Please reach out
+		to <a href="mailto:lnl@wpi.edu" target="_blank">lnl@wpi.edu</a> with any questions or requests for cost
+		estimates. Throughout the next year, we would especially like to hear your honest feedback as we adjust to this
+		change and continue to improve our communication and event services.
+	</p>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading">Why does LNL charge for event services?</h3>
+		<p>
+			LNL charges for our services so that we are able to repair, maintain, and replace the equipment we use to
+			provide services to campus events. LNL is entirely a volunteer organization. We do not charge for labor or
+			our members' time.
+		</p>
+		<p>
+			Financially, LNL operates differently than most student organizations at WPI. We do not receive an annual
+			budget from SGA or WPI for maintaining our event equipment.
+		</p>
+		<hr>
+		<p>
+			<a href="pricing/why-we-charge">Read more here</a> about why we charge for event services and <a
+				href="#projection">read more here</a> about our projection services, which are funded differently.
+			<!--TODO: Add links-->
+		</p>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading">How are LNL prices and services changing?</h3>
+		<p>
+			Our overall goal with price changes was to make small increases for small events and more significant
+			increases for large events with advanced technical needs.
+		</p>
+
+		<a class="collapse-btn btn btn-secondary collapsed" data-toggle="collapse"
+			href="#prices-and-services-changing-1"></a>
+		<div class="collapse alert alert-dark" id="prices-and-services-changing-1">
+			<p>
+				The size and scope of large events at WPI has greatly increased over the last 4 years. As our event
+				services increased in scope, our prices remained constant. This led to a discrepancy between the event
+				price and the cost of maintaining new, advanced equipment.
+			</p>
+			<p>
+				With existing prices, the cost of our services for large events was consistently less than 10% of any
+				external provider.
+			</p>
+			<p>
+				Because of this, large and technically complex events will see the largest change in our prices;
+				however, we will still charge significantly less than an external provider would. See price comparison
+				for details.
+			</p>
+		</div>
+		<p>In addition, some production services have been adjusted to account for different equipment and new services.
+		</p>
+		<a class="collapse-btn btn btn-secondary collapsed" data-toggle="collapse"
+			href="#prices-and-services-changing-2"></a>
+		<div class="collapse alert alert-dark" id="prices-and-services-changing-2">
+			<p>Discounts and fees:</p>
+			<ul>
+				<li>All events that are funded by student organizations (via SGA or fundraising) will receive a 10%
+					student discount for our services.&nbsp;</li>
+			</ul>
+			<p>Lighting:</p>
+			<ul>
+				<li>We added more granular options for complexity and size of lighting. This will help to keep the
+					prices low for smaller events while allowing us to offer more options for larger events.&nbsp;</li>
+			</ul>
+			<p>Sound:</p>
+			<ul>
+				<li>Input Categorization</li>
+				<ul>
+					<li>Audio inputs are microphones or other audio sources (DJ, laptop, etc). &nbsp;</li>
+					<li>The number of inputs in each category (Small, Medium, Large) was increased to fit our updated
+						equipment and the needs on campus.&nbsp;</li>
+					<li>Many events that previously needed large inputs now will be quoted with medium inputs, reducing
+						cost for small events.&nbsp;</li>
+				</ul>
+				<li>Speaker Categorization</li>
+				<ul>
+					<li>We added another category of speakers to make three options: Small, Medium and Large. This will
+						help to keep the prices low for smaller events while allowing us to offer more options for
+						larger events.&nbsp;</li>
+				</ul>
+				<li>Wireless Microphones</li>
+				<ul>
+					<li>Wireless microphones have an additional charge because they cost more to maintain than wired
+						microphones (e.g. batteries and frequent damage).&nbsp;&nbsp;</li>
+					<li>We have switched away from individual wireless mic pricing to a “package system” based on the
+						equipment that is used: <em>Small Wireless Mics Package</em> includes 4 mics, <em>Medium
+							Wireless Mics Package</em> includes 8 mics, and <em>Large Wireless Mics Package</em>
+						includes 40 mics.&nbsp;&nbsp;</li>
+					<li>There will still be an option to add individual wireless mics as an add on to a wireless mic
+						package.&nbsp;</li>
+				</ul>
+				<li>Stage Monitors</li>
+				<ul>
+					<li>Stage Monitors are speakers pointed at the stage or performance area. They are needed so the
+						performers can hear themselves while performing.&nbsp;</li>
+					<li>We now offer two levels of stage monitors:<em> Small Stage Monitors</em> for a single audio mix
+						(appropriate for dancers, soloists and small live music performances) and <em>Large Stage
+							Monitors</em> for multiple audio mixes (appropriate for most live music performances).&nbsp;
+					</li>
+				</ul>
+				<li>Audio Recording</li>
+				<ul>
+					<li>We’ve offered <em>Multitrack Recording</em> for a while, and we also now offer <em>Stereo
+							Recording</em> at a lower cost.&nbsp;</li>
+				</ul>
+			</ul>
+			<p>Rigging:</p>
+			<ul>
+				<li>The category of rigging is based on the truss sections and motors needed to support the lighting,
+					sound, and video services.&nbsp;</li>
+				<li>The rigging category names have been updated to <em>Small Truss Rigging</em> and <em>Large Truss
+						Rigging</em> to match the rest of the price list.&nbsp;</li>
+				<li>We increased the truss sections in <em>Small Rigging </em>from one section to two sections since two
+					sections is very common. This allows more events to be categorized as <em>Small Rigging</em>.&nbsp;
+				</li>
+				<li>We also separated <em>Rigging Towers, </em>16-foot towers that can support truss or fixtures, into
+					their own category.&nbsp;</li>
+			</ul>
+			<p>Video:</p>
+			<ul>
+				<li>We have vastly improved our video and projection capabilities in recent years. We have created
+					several categories of services to better support these requests and quote video services
+					consistently.&nbsp;</li>
+				<li>We now own a variety of projection equipment to support these video services that we have not
+					previously charged for and need to be able to maintain.&nbsp;&nbsp;</li>
+			</ul>
+			</p>
+		</div>
+		<p>To avoid another significant price change in the future, our prices will start adjusting annually
+			proportionally to the CPI (Consumer Price Index) to compensate for inflation. For events funded by student
+			organizations, SGA has indicated that inflation adjustments can be included in annual club budgeting,
+			including inflation-based price adjustments of LNL services. Please reach out to SGA at sgatreasurer@wpi.edu
+			with any questions regarding club budgets or Financial Requests (FRs). </p>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading">Why are LNL prices increasing?</h3>
+		<p>
+			LNL’s prices have not increased since 2011. We reorganized and recategorized our services in 2019, but the
+			average cost of an event decreased. While our prices remained constant, the landscape of event production
+			equipment has changed significantly. As equipment has digitized, it has become an order of magnitude more
+			expensive to buy and repair.
+		</p>
+		<p>
+			Our buying power has decreased to a point where, broadly speaking, we’re able to maintain and repair what we
+			have, but we can’t afford to replace equipment when it reaches the end of its life. Our new prices are based
+			on estimates of what equipment we expect will need replacing in the next 2-4 years.
+		</p>
+		<p>
+			LNL services have greatly expanded since our prices last changed as we have worked to adapt our capabilities
+			to meet the needs of WPI events.
+		</p>
+		<a class="collapse-btn btn btn-secondary collapsed" data-toggle="collapse" href="#prices-increasing-1"></a>
+		<div class="collapse alert alert-dark" id="prices-increasing-1">
+			<dl class="row">
+				<dt class="col-sm-1">Lighting:</dt>
+				<dd class="col-sm-11">Before 2024, we had a limited number of lights that could change color and even
+					fewer that could move. Now, LNL has the capacity to support events with a variety of lighting needs
+					concurrently or with minimal setup time, as is often the case in Alden Hall and the Campus Center
+					Odeum. </dd>
+
+				<dt class="col-sm-1">Sound:</dt>
+				<dd class="col-sm-11">We have greatly improved our ability to support student and professional bands at
+					an increasing number of events, from Pep Rally to cultural celebrations. We can also support some
+					concurrent events with live musical performances and create professional-quality recordings. </dd>
+
+				<dt class="col-sm-1">Video:</dt>
+				<dd class="col-sm-11">LNL started offering advanced video services recently and is still building
+					capacity for media display and projection due to the increased demand. </dd>
+
+				<dt class="col-sm-1">Rigging:</dt>
+				<dd class="col-sm-11">LNL has proactively implemented industry-standard best practices for rigging
+					safety. We have collaborated with the WPI Facilities and Environmental Health and Safety departments
+					to improve the rigging hardware in multiple event spaces. </dd>
+			</dl>
+		</div>
+		<p>Even with the increase, LNL’s prices are significantly lower than external providers. <a
+				href="#comparison">See price comparison for details</a>. </p>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading">Why does LNL ask SGA for additional funding (i.e. submit SGA Funding Requests)? </h3>
+		<p>
+			LNL spends funds to maintain and repair equipment used for current services, replace equipment as it reaches
+			end-of-life, and make incremental equipment upgrades to meet new needs of campus events. Our prices were
+			designed to maintain the equipment needed for our current services. To keep our prices low, LNL does not
+			charge enough to completely fund large equipment upgrades that significantly change our capabilities.
+		</p>
+		<p>
+			When campus events make requests beyond LNL capabilities, we often coordinate external equipment rentals.
+			When we notice that many events are requesting the same rental equipment, we then look into purchasing
+			similar items to avoid recurring rental costs. SGA has previously been open to LNL requesting SGA funds
+			(FRs) to expand our capabilities. Historically, LNL has contributed by partially funding the request and
+			asked SGA to assist with the remainder. We do not have plans to ask SGA to fund any new capabilities in our
+			sound or lighting services in the near future.
+		</p>
+
+		<hr>
+		<p>
+			Below is a summary of SGA FRs in the past 4 years.
+		</p>
+
+		<a class="collapse-btn btn btn-secondary collapsed" data-toggle="collapse" href="#sga-frs-1"></a>
+		<div class="collapse alert alert-dark" id="sga-frs-1">
+			<p>
+				In 2024, LNL requested SGA funding for 18 ETC Lonestar moving lights. Similar lights had been rented
+				from external providers for over a year to support a variety of events with limited set-up time. The
+				goal of this request was to reduce reoccurring costs by purchasing the equipment outright.
+			</p>
+			<ul>
+				<li>Expected equipment life span: 10-15 years</li>
+				<li>Estimated return-on-investment (ROI): 1.83 years</li>
+				<li>View <a href="">FR Presentation Slides</a></li>
+				<li>View <a href="">SGA Minutes</a></li>
+			</ul>
+			<hr>
+
+			<p>
+				In 2024, LNL requested SGA funding for a new (and more durable) inflatable screen to support outdoor
+				movies. The previous screen was not durable, had holes in it from regular usage, and did not have the
+				option to replace worn parts. LNL did not charge student groups to use the screen, and thus requested
+				SGA fund the replacement.
+			</p>
+			<ul>
+				<li>Expected equipment lifespan: 10 years for inflatable screen frame, 2-3 years for screen surface
+					(replaceable separately from frame).</li>
+				<ul>
+					<li>LNL will cover the cost of replacing the screen surface without additional funding requests
+						going forward by charging for use of the inflatable screen.</li>
+				</ul>
+				<li>Estimated return-on-investment (ROI): 1.48 years</li>
+				<li>View <a href="">FR Presentation Slides</a></li>
+				<li>View <a href="">SGA Minutes</a></li>
+			</ul>
+			<hr>
+
+			<p>
+				In 2023, LNL requested SGA funding for 36 wireless microphones to support WPI’s 7 annual a cappella
+				shows and other large stage shows. These microphones had been rented from external providers for over a
+				year before purchasing. The goal of this request was to reduce reoccurring costs by purchasing the
+				equipment outright.
+			</p>
+			<ul>
+				<li>Expected equipment life span: 10-15 years</li>
+				<li>Estimated return-on-investment (ROI): 1.08 years</li>
+				<li>View <a href="">FR Presentation Slides</a></li>
+				<li>View <a href="">SGA Minutes</a></li>
+			</ul>
+			<hr>
+
+			<p>
+				In 2021, LNL requested SGA funding for an inexpensive inflatable screen to support outdoor movies during
+				the pandemic. LNL had been renting a screen from a local provider with limited availability at high
+				cost-per-event. Purchasing a screen offered a good return-on-investment (ROI) and flexibility in
+				scheduling outdoor movies.
+			</p>
+			<ul>
+				<li>Expected equipment life span: 3-5 years</li>
+				<li>Estimated return-on-investment (ROI): 1 year</li>
+				<li>View <a href="">FR Presentation Slides</a></li>
+				<li>View <a href="">SGA Minutes</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading" id="comparison">How does LNL compare with other event production service providers?
+		</h3>
+		<p>
+			With new pricing, LNL provides event services at around 1/4 of the cost of an external event production
+			company or less. Please <a href="pricing/why-we-charge">read more here</a> about why we charge for events
+			and how we are able to offer these prices.
+		</p>
+		<p>
+			In most cases, LNL can supply more equipment and personnel for events than an external service provider. We
+			also have extensive experience with the facilities, resources, and offices involved in supporting events on
+			campus. We’re happy to connect you with resources to make your event a success. However, external providers
+			tend to be more flexible in terms of set-up times and may have more availability during standard working
+			hours. Please reach out to the <a href="https://www.wpi.edu/offices/events-office">WPI Events Office</a> at
+			<a href="https://outlook.office.com/mail/deeplink/compose?to=events@wpi.edu">events@wpi.edu</a> to discuss
+			how LNL compares to external providers and let us know if you have any questions about how we can support
+			your event.
+		</p>
+
+
+		<p class="alert alert-secondary">
+			Please <a href="https://outlook.office.com/mail/deeplink/compose?to=lnl@wpi.edu" style="color:black">email
+				LNL at lnl@wpi.edu</a> for a quote specific to your event and technical needs. Please do not budget your
+			event with these estimates.
+		</p>
+		<table class="table table-bordered table-hover table-sm table-responsive-sm" style="margin-top:1rem;">
+			<thead>
+				<tr style="background-color: rgb(85, 85, 85); color: white;">
+					<th width="25%">Type of event </th>
+					<th width="25%">External Provider Cost (Cheapest)</th>
+					<th width="25%">LNL Event Price<br>(Previous) </th>
+					<th width="25%">New LNL Event Price<br>(as of July 2025) </th>
+				</tr>
+			</thead>
+			<tbody style="background-color: #343a40;">
+				<tr>
+					<td>Odeum Speech &amp; Reception* </td>
+					<td class="table-money">$1,930 </td>
+					<td class="table-money">$270 <br><span>14% of external cost</span></td>
+					<td class="table-money">$440 <br><span>23% of external cost</span> </td>
+				</tr>
+				<tr>
+					<td>Odeum Stage Performances* </td>
+					<td class="table-money">$5,440 <br> </td>
+					<td class="table-money">$465 <br><span>9% of external cost</span> </td>
+					<td class="table-money">$840 <br><span>15% of external cost</span> </td>
+				</tr>
+				<tr>
+					<td>Alden Stage Performances* </td>
+					<td class="table-money">$5,440 </td>
+					<td class="table-money">$640 <br><span>12% of external cost</span> </td>
+					<td class="table-money">$1,570 <br><span>28% of external cost</span> </td>
+				</tr>
+				<tr>
+					<td>Large-scale Alden Dance Party* </td>
+					<td class="table-money">$7,310 </td>
+					<td class="table-money">$505 <br><span>7% of external cost</span> </td>
+					<td class="table-money">$1,430 <br><span>20% of external cost</span> </td>
+				</tr>
+				<tr>
+					<td>Large speakers covering the Quad </td>
+					<td class="table-money">$2,740 </td>
+					<td class="table-money">$390 <br><span>15% of external cost</span> </td>
+					<td class="table-money">$460 <br><span>17% of external cost</span> </td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			All prices shown are estimations based on event bookings. To get a quote specific to your event and its
+			needs, please <a href="https://outlook.office.com/mail/deeplink/compose?to=lnl@wpi.edu">email LNL at
+				lnl@wpi.edu</a> and/or contact the <a href="https://www.wpi.edu/offices/events-office">WPI Events
+				Office</a> at <a
+				href="https://outlook.office.com/mail/deeplink/compose?to=events@wpi.edu">events@wpi.edu</a> to get in
+			touch with external service providers.
+		</p>
+		<p>
+			*Examples do not include external performers with additional needs, rentals, or “music festivals” (events
+			with 3 or more bands).
+		</p>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading" id="projection">SGA supports LNL Film & Digital Projection</h3>
+		<p>
+			Since 1989, LNL has provided film projection services in Fuller Perrault Hall (and before then, we provided
+			projection services in Alden Hall and Salisbury 115). Nowadays, we provide digital, 16mm, 35mm, and 70mm
+			film projection services for weekend movies, special events, and film screenings.
+		</p>
+		<p>
+			Financially speaking, projection services in the Fuller Upper Booth operate separately from the rest of the
+			club. LNL has received funding directly from the student life fee to maintain our projectors and supporting
+			equipment. Projection funding is separated into a different WPI Workday fund (worktag) and is not used to
+			support LNL event services.
+		</p>
+		<hr>
+		<p>
+			<a href="/services/projection">Read more here</a> about LNL’s beginnings in film projection and our unique
+			modern projection capabilities.
+		</p>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading" id="resources">Resources for SGA-funded Student Organizations</h3>
+		<p>
+			If your event is funded by an SGA Funding Request (FR) or budget, we suggest submitting a funding request to
+			SGA at least 3-4 weeks before your event. SGA is expecting LNL services to be more expensive than they have
+			been in years past.
+		</p>
+		<hr>
+		<p>
+			For organizations with SGA budget line items for LNL services, an FR will be needed for each event with an
+			increased price. To make SGA Funding Requests (FRs) for budgeted events as easy as possible, we created a
+			template form response, breakdown spreadsheet, and presentation with details prefilled based on SGA’s
+			templates.
+		</p>
+		<ul>
+			<li>Download <a
+					href="https://wpi0.sharepoint.com/:w:/s/gr-lnl-exec/EbuaAp6bGHFDia-ogd7iTNABAqzvy7QqcsG0B4kH9_XI2g?e=2e5PEC"><strong>FR
+						request form</strong> template here</a> (Word)</li>
+			<li>Download <a
+					href="https://wpi0.sharepoint.com/:x:/s/gr-lnl-exec/Ed7-KknM9-BDvF_szDarMPIBGnf9szNg6p1y-RnncikfLg?e=WrFDLA"><strong>FR
+						breakdown spreadsheet</strong> template here</a> (Excel)</li>
+			<li>Download <a
+					href="https://wpi0.sharepoint.com/:p:/s/gr-lnl-exec/EUEjMlJKNv1Plt_8-gsMdqYBxTNXWhS0teVfIM2CCAAj0A?e=ZYf9B6"><strong>FR
+						presentation</strong> template here</a> (PowerPoint)</li>
+		</ul>
+		<p>
+			If you have any questions about funding requests, budgets, or any other SGA financial matters, please email
+			the SGA treasurer at <a
+				href="https://outlook.office.com/mail/deeplink/compose?to=sgatreasurer@wpi.edu">sgatreasurer@wpi.edu</a>.
+		</p>
+
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading" id="projection"> Next Steps</h3>
+		<p>
+			If you would like to learn more about this pricing change, why we charge for event services, and how we
+			spend our funds, please <a href="pricing/why-we-charge">read more here</a>.
+		</p>
+		<p>
+			If you’d like a price estimate based on a previous event request, please <a
+				href="https://outlook.office.com/mail/deeplink/compose?to=lnl@wpi.edu">email LNL at lnl@wpi.edu</a>;
+			price estimates can be given with no date and make no promises of our availability.
+		</p>
+		<p>
+			For a small event quote, please <a
+				href="https://outlook.office.com/mail/deeplink/compose?to=lnl@wpi.edu">email LNL at lnl@wpi.edu</a> more
+			than 2 weeks in advance, and for a large event quote, 6 weeks in advance. We need a date, location, and
+			event specifics to provide a quote (and SGA informed us that they would generally like to see a quote before
+			approving an FR).
+		</p>
+	</div>
+	<div class="alert alert-dark">
+		<h3 class="alert-heading" id="projection">Questions, Comments, or Concerns?</h3>
+		<p>
+			Please reach out to us via email at <a
+				href="https://outlook.office.com/mail/deeplink/compose?to=lnl@wpi.edu">lnl@wpi.edu</a>. We’re happy to
+			chat about options for your next event and discuss any feedback.
+		</p>
+	</div>
+</div>
+{% endblock %}

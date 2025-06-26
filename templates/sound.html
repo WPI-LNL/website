@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Lens and Lights | Sound{% endblock %}
+{% block description %}Can you hear that? That's the sound of people talking about how great your event was after you booked LNL!{% endblock %}
+
+{% block content %}
+<section class="pb-1 light">
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item full active" style="background-image: url('/assets/img/sound/technichords.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Temptations from the Tropics</span>
+                    was an A Capella concert that used 32 channels of ULX-D wireless microphones</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/sound/botb.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">Battle of the Bands</span>
+                    was mixed on a Yamaha QL5</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/sound/harrington-linearrays.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">New Student Orientation</span>
+                    used our line arrays hung in Harrington Auditorium</p>
+                </div>
+            </div>
+            <div class="carousel-item full" style="background-image: url('/assets/img/sound/intl-dinner.jpg');">
+                <div class="carousel-caption">
+                    <p><span class="head">International Dinner</span>
+                    was mixed on a DiGiCo S31</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control-next" href="#slides" role="button" data-slide="next">&rsaquo;</a>
+    </div>
+</section>
+<section class="text-white bg-dark up-shadow">
+    <div class="container py-5">
+        <h1 style="color: yellow">Sound</h1>
+        <br>
+        <p>Lens and Lights has been providing quality audio services to the WPI community for more than 40 years. From small speaking engagements to full-scale concerts, 
+        we have the professional equipment, the technical expertise, and a passionate detail-oriented team to make your event stand out among the rest.</p>
+        <p>We’ve provided sound services to everyone from student bands to Grammy-award winning artists. Lens and Lights has been on the WPI campus since 1962, so you can rest 
+        assured we know the ins and outs of every event space on campus – experience we leverage to produce the best show possible for you. With our inventory and experience 
+        we can make any event sound great whether it’s in Harrington, on the Quad, or even in a classroom.</p>
+        <p>We boast a wide selection of professional sound equipment from industry-renowned brands. Speakers from EAW and Meyer, mixing consoles from Yamaha, DiGiCo and 
+        Midas, and amps and processing from dbx and LabGruppen encompass just some of the hardware we own. For larger events, we can rent more speakers, consoles, and just 
+        about anything required for you to sound your best.</p>
+        <p>With a significant equipment inventory and team, we can support multiple ongoing events, even during the most demanding times of year – Alumni Weekend, Homecoming, 
+        New Student Orientation, and the like. Please don’t hesitate to get in touch. We’d love to work with you on providing affordable high-quality audio services at your event!</p>
+    </div>
+</section>
+<section style="background-color: #262626">
+    <div class="container pt-4 text-white">
+        <h3 class="h4 mt-2" style="color: yellow">Equipment</h3>
+        <p class="mb-0 pb-2">Want to learn more about the equipment we use? Check out our Technical Overview for an in-depth look at our inventory.<br><br>
+        <button class="btn btn-warning" onclick="window.location.href='/equipment'">Learn More</button><br><br></p>
+    </div>
+</section>
+{% endblock %}
