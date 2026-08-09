@@ -5,4 +5,5 @@ Disallow: /list/json
 Disallow: /assets/js
 Disallow: /assets/css
 Disallow: /software
-Disallow: /caring
+Disallow: /media
+Disallow: /static
