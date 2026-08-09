@@ -282,13 +282,14 @@ li a:hover { text-decoration-color: currentColor; }
   position: absolute;
   top: 1rem;
   right: 1.25rem;
+  z-index: 4;
   background: none;
   border: 0;
   color: #fff;
   cursor: pointer;
 }
 .lightbox-close svg { width: 2rem; height: 2rem; }
-.lightbox .carousel-nav { color: #fff; }
+.lightbox .carousel-nav { color: #fff; top: 3.5rem; bottom: 3.5rem; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
