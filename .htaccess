@@ -10,9 +10,15 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
 
-# Clean URLs (example.com/about instead of about.html)
+# Old /services/* URLs moved to top-level in the 2026 site redesign
+RewriteRule ^services/lighting/?$ /lighting [L,R=301]
+RewriteRule ^services/sound/?$ /sound [L,R=301]
+RewriteRule ^services/projection/?$ /projection [L,R=301]
+
+# Clean URLs (example.com/about instead of about.html, including nested
+# paths like example.com/pricing/why-we-charge)
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
+RewriteRule ^(.*[^/])$ $1.html [L]
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
@@ -35,3 +41,6 @@ PassengerEnabled On
 <FilesMatch "^\.">
   Require all denied
 </FilesMatch>
+
+# Block directories starting with a dot (.git, .env)
+RewriteRule ^\. - [R=403]
