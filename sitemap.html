@@ -14,6 +14,9 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
 	<style>
+		.sitemap-columns { columns: 15rem; column-gap: 1.75rem; }
+		.sitemap-group { break-inside: avoid; margin-bottom: 1.75rem; }
+		.sitemap-group h3 { margin-bottom: 0.65rem; }
 		.sitemap-group ul li + li { margin-top: 0.45rem; }
 	</style>
 </head>
@@ -25,7 +28,7 @@
 		<div class="container">
 			<h1 style="font-size:1.5rem;">LNL Site Map</h1>
 			<hr style="border-color:var(--line); margin:1.5rem 0;">
-			<div class="grid grid--auto">
+			<div class="sitemap-columns">
 				<div class="sitemap-group">
 					<h3 style="font-size:1.05rem;">About</h3>
 					<ul id="About">
@@ -54,7 +57,7 @@
 				</div>
 			</div>
 			<hr style="border-color:var(--line); margin:1.5rem 0;">
-			<div class="grid grid--auto">
+			<div class="sitemap-columns">
 				<div class="sitemap-group">
 					<h3 style="font-size:1.05rem;">Account</h3>
 					<ul id="Account">
@@ -103,7 +106,7 @@
 				</div>
 			</div>
 			<hr style="border-color:var(--line); margin:1.5rem 0;">
-			<div class="grid grid--auto" id="more-links">
+			<div class="sitemap-columns" id="more-links">
 				<div class="sitemap-group" id="additional-links" style="display:none;">
 					<h3 style="font-size:1.05rem;">Additional Links</h3>
 					<ul id="Redirects"></ul>
