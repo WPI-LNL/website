@@ -115,9 +115,13 @@
 
 			if (root.hasAttribute("data-autoplay")) {
 				var delay = parseInt(root.getAttribute("data-autoplay"), 10) || 6000;
-				var timer = setInterval(function () { goTo(currentIndex() + 1); }, delay);
-				root.addEventListener("mouseenter", function () { clearInterval(timer); });
-				root.addEventListener("touchstart", function () { clearInterval(timer); }, { passive: true });
+				var timer;
+				var startAutoplay = function () { timer = setInterval(function () { goTo(currentIndex() + 1); }, delay); };
+				var stopAutoplay = function () { clearInterval(timer); };
+				startAutoplay();
+				root.addEventListener("mouseenter", stopAutoplay);
+				root.addEventListener("mouseleave", startAutoplay);
+				root.addEventListener("touchstart", stopAutoplay, { passive: true });
 			}
 		});
 	}

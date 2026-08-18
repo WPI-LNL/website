@@ -66,17 +66,16 @@ p { color: var(--text-dim); }
 p + p { margin-top: 0.9em; }
 
 a { text-decoration: none; }
-.prose a,
-p a,
-li a {
+.prose a:not(.btn),
+p a:not(.btn),
+li a:not(.btn) {
   color: var(--lnl-yellow);
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 242, 4, 0.4);
+  text-decoration: none;
   text-underline-offset: 0.15em;
 }
-.prose a:hover,
-p a:hover,
-li a:hover { text-decoration-color: currentColor; }
+.prose a:not(.btn):hover,
+p a:not(.btn):hover,
+li a:not(.btn):hover { text-decoration: underline; }
 
 .accent { color: var(--lnl-yellow); }
 
@@ -116,6 +115,17 @@ li a:hover { text-decoration-color: currentColor; }
 }
 .grid--auto {
   grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+}
+
+/* Grid columns with uneven copy length: keep the CTA pinned to the
+   same baseline across a row instead of trailing right after the text. */
+.grid--align-cta > * {
+  display: flex;
+  flex-direction: column;
+}
+.grid--align-cta > * > .cta {
+  margin-top: auto;
+  padding-top: 1.25rem;
 }
 
 .cluster {
