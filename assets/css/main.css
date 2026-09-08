@@ -388,10 +388,6 @@ li a:not(.btn):hover { text-decoration: underline; }
   color: #000;
 }
 
-.site-nav a.nav-cta--alt { background: #e4e4e4; color: #000; }
-.site-nav a.nav-cta--alt:hover,
-.site-nav a.nav-cta--alt[aria-current="page"] { background: #c7c7c7; color: #000; }
-
 @media (max-width: 860px) {
   .nav-toggle { display: flex; }
   .site-nav {
