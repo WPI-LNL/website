@@ -475,8 +475,11 @@ li a:not(.btn):hover { text-decoration: underline; }
 .panel--yellow p { color: #1a1a1a; }
 .panel--light { background: #ececec; color: #111; border: 0; }
 .panel--light p { color: #333; }
+.panel--light p a:not(.btn),
+.panel--light li a:not(.btn),
 .panel--light a { color: #0b5fa5; }
 .panel + .panel { margin-top: 1.25rem; }
+.grid > .panel + .panel { margin-top: 0; }
 
 details.panel { padding: 0; }
 details.panel > summary {
