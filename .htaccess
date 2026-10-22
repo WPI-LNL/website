@@ -18,7 +18,7 @@ RewriteRule ^services/projection/?$ /projection [L,R=301]
 # Clean URLs (example.com/about instead of about.html, including nested
 # paths like example.com/pricing/why-we-charge)
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*[^/])$ $1.html [L]
+RewriteRule ^(.*[^/])/?$ $1.html [L]
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
